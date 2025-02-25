@@ -21,12 +21,6 @@
             </summary>
             <param name="w">Binary stream.</param>
         </member>
-        <member name="M:Vestris.ResourceLib.Accelerator.ToString">
-            <summary>
-            String representation of the accelerator.
-            </summary>
-            <returns>String representation of the accelerator.</returns>
-        </member>
         <member name="P:Vestris.ResourceLib.Accelerator.Key">
             <summary>
             String representation of the accelerator key.
@@ -37,177 +31,21 @@
             An unsigned integer value that identifies the accelerator.
             </summary>
         </member>
+        <member name="M:Vestris.ResourceLib.Accelerator.ToString">
+            <summary>
+            String representation of the accelerator.
+            </summary>
+            <returns>String representation of the accelerator.</returns>
+        </member>
         <member name="T:Vestris.ResourceLib.AcceleratorResource">
             <summary>
             An accelerator, RT_ACCELERATOR resource.
             An accelerator provides the user with access to an application's command set.
             </summary>
         </member>
-        <member name="T:Vestris.ResourceLib.Resource">
+        <member name="P:Vestris.ResourceLib.AcceleratorResource.Accelerators">
             <summary>
-            A version resource.
-            </summary>
-        </member>
-        <member name="F:Vestris.ResourceLib.Resource._type">
-            <summary>
-            Resource type.
-            </summary>
-        </member>
-        <member name="F:Vestris.ResourceLib.Resource._name">
-            <summary>
-            Resource name.
-            </summary>
-        </member>
-        <member name="F:Vestris.ResourceLib.Resource._language">
-            <summary>
-            Resource language.
-            </summary>
-        </member>
-        <member name="F:Vestris.ResourceLib.Resource._hModule">
-            <summary>
-            Loaded binary nodule.
-            </summary>
-        </member>
-        <member name="F:Vestris.ResourceLib.Resource._hResource">
-            <summary>
-            Pointer to the resource.
-            </summary>
-        </member>
-        <member name="F:Vestris.ResourceLib.Resource._size">
-            <summary>
-            Resource size.
-            </summary>
-        </member>
-        <member name="M:Vestris.ResourceLib.Resource.#ctor">
-            <summary>
-            A new resource.
-            </summary>
-        </member>
-        <member name="M:Vestris.ResourceLib.Resource.#ctor(System.IntPtr,System.IntPtr,Vestris.ResourceLib.ResourceId,Vestris.ResourceLib.ResourceId,System.UInt16,System.Int32)">
-            <summary>
-            A structured resource embedded in an executable module.
-            </summary>
-            <param name="hModule">Module handle.</param>
-            <param name="hResource">Resource handle.</param>
-            <param name="type">Resource type.</param>
-            <param name="name">Resource name.</param>
-            <param name="language">Language ID.</param>
-            <param name="size">Resource size.</param>
-        </member>
-        <member name="M:Vestris.ResourceLib.Resource.LockAndReadResource(System.IntPtr,System.IntPtr)">
-            <summary>
-            Lock and read the resource.
-            </summary>
-            <param name="hModule">Module handle.</param>
-            <param name="hResource">Resource handle.</param>
-        </member>
-        <member name="M:Vestris.ResourceLib.Resource.LoadFrom(System.String)">
-            <summary>
-            Load a resource from an executable (.exe or .dll) file.
-            </summary>
-            <param name="filename">An executable (.exe or .dll) file.</param>
-        </member>
-        <member name="M:Vestris.ResourceLib.Resource.LoadFrom(System.String,Vestris.ResourceLib.ResourceId,Vestris.ResourceLib.ResourceId,System.UInt16)">
-            <summary>
-            Load a resource from an executable (.exe or .dll) file.
-            </summary>
-            <param name="filename">An executable (.exe or .dll) file.</param>
-            <param name="name">Resource name.</param>
-            <param name="type">Resource type.</param>
-            <param name="lang">Resource language.</param>
-        </member>
-        <member name="M:Vestris.ResourceLib.Resource.LoadFrom(System.IntPtr,Vestris.ResourceLib.ResourceId,Vestris.ResourceLib.ResourceId,System.UInt16)">
-            <summary>
-            Load a resource from an executable (.exe or .dll) module.
-            </summary>
-            <param name="hModule">An executable (.exe or .dll) module.</param>
-            <param name="type">Resource type.</param>
-            <param name="name">Resource name.</param>
-            <param name="lang">Resource language.</param>
-        </member>
-        <member name="M:Vestris.ResourceLib.Resource.Read(System.IntPtr,System.IntPtr)">
-            <summary>
-            Read a resource from a previously loaded module.
-            </summary>
-            <param name="hModule">Module handle.</param>
-            <param name="lpRes">Pointer to the beginning of the resource.</param>
-            <returns>Pointer to the end of the resource.</returns>
-        </member>
-        <member name="M:Vestris.ResourceLib.Resource.Write(System.IO.BinaryWriter)">
-            <summary>
-            Write the resource to a memory stream.
-            </summary>
-            <param name="w">Binary stream.</param>
-        </member>
-        <member name="M:Vestris.ResourceLib.Resource.WriteAndGetBytes">
-            <summary>
-            Return resource data.
-            </summary>
-            <returns>Resource data.</returns>
-        </member>
-        <member name="M:Vestris.ResourceLib.Resource.SaveTo(System.String)">
-            <summary>
-            Save a resource.
-            </summary>
-            <param name="filename">Name of an executable file (.exe or .dll).</param>
-        </member>
-        <member name="M:Vestris.ResourceLib.Resource.SaveTo(System.String,Vestris.ResourceLib.ResourceId,Vestris.ResourceLib.ResourceId,System.UInt16)">
-            <summary>
-            Save a resource to an executable (.exe or .dll) file.
-            </summary>
-            <param name="filename">Path to an executable file.</param>
-            <param name="name">Resource name.</param>
-            <param name="type">Resource type.</param>
-            <param name="langid">Language id.</param>
-        </member>
-        <member name="M:Vestris.ResourceLib.Resource.DeleteFrom(System.String)">
-            <summary>
-            Delete a resource from an executable (.exe or .dll) file.
-            </summary>
-            <param name="filename">Path to an executable file.</param>
-        </member>
-        <member name="M:Vestris.ResourceLib.Resource.Delete(System.String,Vestris.ResourceLib.ResourceId,Vestris.ResourceLib.ResourceId,System.UInt16)">
-            <summary>
-            Delete a resource from an executable (.exe or .dll) file.
-            </summary>
-            <param name="filename">Path to an executable file.</param>
-            <param name="name">Resource name.</param>
-            <param name="type">Resource type.</param>
-            <param name="lang">Resource language.</param>
-        </member>
-        <member name="M:Vestris.ResourceLib.Resource.SaveTo(System.String,Vestris.ResourceLib.ResourceId,Vestris.ResourceLib.ResourceId,System.UInt16,System.Byte[])">
-            <summary>
-            Save a resource to an executable (.exe or .dll) file.
-            </summary>
-            <param name="filename">Path to an executable file.</param>
-            <param name="name">Resource name.</param>
-            <param name="type">Resource type.</param>
-            <param name="lang">Resource language.</param>
-            <param name="data">Resource data.</param>
-        </member>
-        <member name="P:Vestris.ResourceLib.Resource.Size">
-            <summary>
-            Version resource size in bytes.
-            </summary>
-        </member>
-        <member name="P:Vestris.ResourceLib.Resource.Language">
-            <summary>
-            Language ID.
-            </summary>
-        </member>
-        <member name="P:Vestris.ResourceLib.Resource.Type">
-            <summary>
-            Resource type.
-            </summary>
-        </member>
-        <member name="P:Vestris.ResourceLib.Resource.TypeName">
-            <summary>
-            String representation of the resource type.
-            </summary>
-        </member>
-        <member name="P:Vestris.ResourceLib.Resource.Name">
-            <summary>
-            Resource name.
+            Accelerator keys.
             </summary>
         </member>
         <member name="M:Vestris.ResourceLib.AcceleratorResource.#ctor">
@@ -240,9 +78,9 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="P:Vestris.ResourceLib.AcceleratorResource.Accelerators">
+        <member name="T:Vestris.ResourceLib.Aligned">
             <summary>
-            Accelerator keys.
+            Creates an 8 bit aligned copy of the buffer if it is not already aligned
             </summary>
         </member>
         <member name="T:Vestris.ResourceLib.BitmapFile">
@@ -250,16 +88,16 @@
             A bitmap file in a .bmp format.
             </summary>
         </member>
+        <member name="P:Vestris.ResourceLib.BitmapFile.Bitmap">
+            <summary>
+            Device independent bitmap.
+            </summary>
+        </member>
         <member name="M:Vestris.ResourceLib.BitmapFile.#ctor(System.String)">
             <summary>
             An existing bitmap file.
             </summary>
             <param name="filename">A file in a .bmp format.</param>
-        </member>
-        <member name="P:Vestris.ResourceLib.BitmapFile.Bitmap">
-            <summary>
-            Device independent bitmap.
-            </summary>
         </member>
         <member name="T:Vestris.ResourceLib.BitmapResource">
             <summary>
@@ -301,29 +139,14 @@
             A device independent bitmap.
             </summary>
         </member>
-        <member name="T:Vestris.ResourceLib.CursorResource">
+        <member name="T:Vestris.ResourceLib.CursorDirectoryResource">
             <summary>
-            This structure depicts the organization of data in a cursor resource.
+            This structure depicts the organization of data in a hardware-independent cursor resource.
             </summary>
         </member>
-        <member name="T:Vestris.ResourceLib.IconImageResource">
+        <member name="M:Vestris.ResourceLib.CursorDirectoryResource.#ctor(System.IntPtr,System.IntPtr,Vestris.ResourceLib.ResourceId,Vestris.ResourceLib.ResourceId,System.UInt16,System.Int32)">
             <summary>
-            This structure depicts the organization of data in an icon resource.
-            </summary>
-        </member>
-        <member name="F:Vestris.ResourceLib.IconImageResource._header">
-            <summary>
-            Directory header.
-            </summary>
-        </member>
-        <member name="F:Vestris.ResourceLib.IconImageResource._image">
-            <summary>
-            Actual image.
-            </summary>
-        </member>
-        <member name="M:Vestris.ResourceLib.IconImageResource.#ctor(System.IntPtr,System.IntPtr,Vestris.ResourceLib.ResourceId,Vestris.ResourceLib.ResourceId,System.UInt16,System.Int32)">
-            <summary>
-            An existing icon resource.
+            A hardware-independent cursor resource.
             </summary>
             <param name="hModule">Module handle.</param>
             <param name="hResource">Resource ID.</param>
@@ -332,91 +155,19 @@
             <param name="language">Language ID.</param>
             <param name="size">Resource size.</param>
         </member>
-        <member name="M:Vestris.ResourceLib.IconImageResource.#ctor(Vestris.ResourceLib.ResourceId)">
+        <member name="M:Vestris.ResourceLib.CursorDirectoryResource.#ctor">
             <summary>
-            A new icon resource.
+            A new hardware-independent cursor resource.
             </summary>
         </member>
-        <member name="M:Vestris.ResourceLib.IconImageResource.#ctor(Vestris.ResourceLib.IconFileIcon,Vestris.ResourceLib.ResourceId,Vestris.ResourceLib.ResourceId,System.UInt16)">
+        <member name="M:Vestris.ResourceLib.CursorDirectoryResource.#ctor(Vestris.ResourceLib.IconFile)">
             <summary>
-            Create a new icon image resource from a file icon.
-            </summary>
-            <param name="icon">File icon.</param>
-            <param name="type">Resource type.</param>
-            <param name="name">Resource id.</param>
-            <param name="language">Resource language.</param>
-        </member>
-        <member name="M:Vestris.ResourceLib.IconImageResource.Read(System.IntPtr,System.IntPtr)">
-            <summary>
-            Read an icon resource from a previously loaded module.
-            </summary>
-            <param name="hModule">Module handle.</param>
-            <param name="lpRes">Pointer to a directory entry in the hardware-independent icon resource.</param>
-            <returns>Pointer to the end of the icon resource.</returns>
-        </member>
-        <member name="M:Vestris.ResourceLib.IconImageResource.ReadImage(System.IntPtr,System.UInt32)">
-            <summary>
-            Read the bitmap image.
-            </summary>
-            <param name="dibBits">DIB bits.</param>
-            <param name="size">Size of image.</param>
-        </member>
-        <member name="M:Vestris.ResourceLib.IconImageResource.ToString">
-            <summary>
-            String representation of the icon.
-            </summary>
-            <returns>A string in a format of width x height followed by the pixel format.</returns>
-        </member>
-        <member name="M:Vestris.ResourceLib.IconImageResource.Write(System.IO.BinaryWriter)">
-            <summary>
-            Write icon resource data to a binary stream.
-            </summary>
-            <param name="w">Binary stream.</param>
-        </member>
-        <member name="M:Vestris.ResourceLib.IconImageResource.SaveIconTo(System.String)">
-            <summary>
-            Save icon to a file.
-            </summary>
-            <param name="filename">Target executable file.</param>
-        </member>
-        <member name="P:Vestris.ResourceLib.IconImageResource.Header">
-            <summary>
-            Hardware-independent icon directory header.
+            A new collection of cursors that can be embedded into an executable file.
             </summary>
         </member>
-        <member name="P:Vestris.ResourceLib.IconImageResource.Id">
+        <member name="T:Vestris.ResourceLib.CursorResource">
             <summary>
-            Embedded icon Id.
-            </summary>
-        </member>
-        <member name="P:Vestris.ResourceLib.IconImageResource.Image">
-            <summary>
-            An icon image.
-            </summary>
-        </member>
-        <member name="P:Vestris.ResourceLib.IconImageResource.Width">
-            <summary>
-            Icon width in pixels.
-            </summary>
-        </member>
-        <member name="P:Vestris.ResourceLib.IconImageResource.Height">
-            <summary>
-            Icon height in pixels.
-            </summary>
-        </member>
-        <member name="P:Vestris.ResourceLib.IconImageResource.ImageSize">
-            <summary>
-            Image size in bytes.
-            </summary>
-        </member>
-        <member name="P:Vestris.ResourceLib.IconImageResource.PixelFormat">
-            <summary>
-            Icon pixel format.
-            </summary>
-        </member>
-        <member name="P:Vestris.ResourceLib.IconImageResource.PixelFormatString">
-            <summary>
-            Icon pixel format English standard string.
+            This structure depicts the organization of data in a cursor resource.
             </summary>
         </member>
         <member name="M:Vestris.ResourceLib.CursorResource.#ctor(System.IntPtr,System.IntPtr,Vestris.ResourceLib.ResourceId,Vestris.ResourceLib.ResourceId,System.UInt16,System.Int32)">
@@ -444,6 +195,18 @@
             <param name="language">Language.</param>
             <returns>An icon resource.</returns>
         </member>
+        <member name="P:Vestris.ResourceLib.CursorResource.HotspotX">
+            <summary>
+            Horizontal hotspot coordinate.
+            The hot spot of a cursor is the point to which Windows refers in tracking the cursor's position. 
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.CursorResource.HotspotY">
+            <summary>
+            Vertical hot spot coordinate.
+            The hot spot of a cursor is the point to which Windows refers in tracking the cursor's position. 
+            </summary>
+        </member>
         <member name="M:Vestris.ResourceLib.CursorResource.SaveIconTo(System.String)">
             <summary>
             Write the cursor data to a file.
@@ -457,21 +220,239 @@
             <param name="dibBits">DIB bits.</param>
             <param name="size">DIB size.</param>
         </member>
-        <member name="P:Vestris.ResourceLib.CursorResource.HotspotX">
+        <member name="T:Vestris.ResourceLib.DeviceIndependentBitmap">
             <summary>
-            Horizontal hotspot coordinate.
-            The hot spot of a cursor is the point to which Windows refers in tracking the cursor's position. 
+            A device-independent image consists of a BITMAPINFOHEADER where
+            bmWidth is the width of the image andbmHeight is double the height 
+            of the image, followed by the bitmap color table, followed by the image
+            pixels, followed by the mask pixels.
             </summary>
         </member>
-        <member name="P:Vestris.ResourceLib.CursorResource.HotspotY">
+        <member name="P:Vestris.ResourceLib.DeviceIndependentBitmap.Data">
             <summary>
-            Vertical hot spot coordinate.
-            The hot spot of a cursor is the point to which Windows refers in tracking the cursor's position. 
+            Raw image data.
             </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.DeviceIndependentBitmap.Header">
+            <summary>
+            Bitmap info header.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.DeviceIndependentBitmap.Size">
+            <summary>
+            Bitmap size in bytes.
+            </summary>
+        </member>
+        <member name="M:Vestris.ResourceLib.DeviceIndependentBitmap.#ctor">
+            <summary>
+            A new icon image.
+            </summary>
+        </member>
+        <member name="M:Vestris.ResourceLib.DeviceIndependentBitmap.#ctor(System.Byte[])">
+            <summary>
+            A device-independent bitmap.
+            </summary>
+            <param name="data">Bitmap data.</param>
+        </member>
+        <member name="M:Vestris.ResourceLib.DeviceIndependentBitmap.#ctor(Vestris.ResourceLib.DeviceIndependentBitmap)">
+            <summary>
+            Create a copy of an image.
+            </summary>
+            <param name="image">Source image.</param>
+        </member>
+        <member name="M:Vestris.ResourceLib.DeviceIndependentBitmap.Read(System.IntPtr,System.UInt32)">
+            <summary>
+            Read icon data.
+            </summary>
+            <param name="lpData">Pointer to the beginning of icon data.</param>
+            <param name="size">Icon data size.</param>
+        </member>
+        <member name="P:Vestris.ResourceLib.DeviceIndependentBitmap.MaskImageSize">
+            <summary>
+            Size of the image mask.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.DeviceIndependentBitmap.XorImageIndex">
+            <summary>
+            Position of the DIB bitmap bits within a DIB bitmap array.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.DeviceIndependentBitmap.ColorCount">
+            <summary>
+            Number of colors in the palette.
+            </summary>
+        </member>
+        <member name="M:Vestris.ResourceLib.DeviceIndependentBitmap.GetDIBRowWidth(System.Int32)">
+            <summary>
+            Returns the width of a row in a DIB Bitmap given the number of bits. DIB Bitmap rows always align on a DWORD boundary.
+            </summary>
+            <param name="width">Number of bits.</param>
+            <returns>Width of a row in bytes.</returns>
+        </member>
+        <member name="P:Vestris.ResourceLib.DeviceIndependentBitmap.Mask">
+            <summary>
+            Bitmap monochrome mask.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.DeviceIndependentBitmap.Color">
+            <summary>
+            Bitmap color (XOR) part of the image.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.DeviceIndependentBitmap.Image">
+            <summary>
+            Complete image.
+            </summary>
+        </member>
+        <member name="T:Vestris.ResourceLib.DialogExTemplate">
+            <summary>
+            A container for the DIALOGTEMPLATEEX structure.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.DialogExTemplate.CharacterSet">
+            <summary>
+            Indicates the character set to use.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.DialogExTemplate.x">
+            <summary>
+            X-coordinate, in dialog box units, of the upper-left corner of the dialog box. 
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.DialogExTemplate.y">
+            <summary>
+            Y-coordinate, in dialog box units, of the upper-left corner of the dialog box.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.DialogExTemplate.cx">
+            <summary>
+            Width, in dialog box units, of the dialog box.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.DialogExTemplate.cy">
+            <summary>
+            Height, in dialog box units, of the dialog box.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.DialogExTemplate.Style">
+            <summary>
+            Dialog style.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.DialogExTemplate.ExtendedStyle">
+            <summary>
+            Extended dialog style.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.DialogExTemplate.Weight">
+            <summary>
+            Weight of the font. 
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.DialogExTemplate.Italic">
+            <summary>
+            Indicates whether the font is italic.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.DialogExTemplate.ControlCount">
+            <summary>
+            Number of dialog items.
+            </summary>
+        </member>
+        <member name="M:Vestris.ResourceLib.DialogExTemplate.#ctor">
+            <summary>
+            An extended dialog structure.
+            </summary>
+        </member>
+        <member name="M:Vestris.ResourceLib.DialogExTemplate.Read(System.IntPtr)">
+            <summary>
+            Read the dialog resource.
+            </summary>
+            <param name="lpRes">Pointer to the beginning of the dialog structure.</param>
+        </member>
+        <member name="M:Vestris.ResourceLib.DialogExTemplate.Write(System.IO.BinaryWriter)">
+            <summary>
+            Write dialog control to a binary stream.
+            </summary>
+            <param name="w">Binary stream.</param>
+        </member>
+        <member name="M:Vestris.ResourceLib.DialogExTemplate.ToString">
+            <summary>
+            String representation of the dialog.
+            </summary>
+            <returns>String in the DIALOGEX [dialog] format.</returns>
+        </member>
+        <member name="T:Vestris.ResourceLib.DialogExTemplateControl">
+            <summary>
+            A container for the DIALOGTEMPLATEEX structure.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.DialogExTemplateControl.x">
+            <summary>
+            X-coordinate, in dialog box units, of the upper-left corner of the dialog box. 
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.DialogExTemplateControl.y">
+            <summary>
+            Y-coordinate, in dialog box units, of the upper-left corner of the dialog box.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.DialogExTemplateControl.cx">
+            <summary>
+            Width, in dialog box units, of the dialog box.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.DialogExTemplateControl.cy">
+            <summary>
+            Height, in dialog box units, of the dialog box.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.DialogExTemplateControl.Style">
+            <summary>
+            Dialog style.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.DialogExTemplateControl.ExtendedStyle">
+            <summary>
+            Extended dialog style.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.DialogExTemplateControl.Id">
+            <summary>
+            Control identifier.
+            </summary>
+        </member>
+        <member name="M:Vestris.ResourceLib.DialogExTemplateControl.#ctor">
+            <summary>
+            An extended dialog control template structure.
+            </summary>
+        </member>
+        <member name="M:Vestris.ResourceLib.DialogExTemplateControl.Read(System.IntPtr)">
+            <summary>
+            Read the dialog control.
+            </summary>
+            <param name="lpRes">Pointer to the beginning of the dialog structure.</param>
+        </member>
+        <member name="M:Vestris.ResourceLib.DialogExTemplateControl.Write(System.IO.BinaryWriter)">
+            <summary>
+            Write the dialog control to a binary stream.
+            </summary>
+            <param name="w">Binary stream.</param>
+        </member>
+        <member name="M:Vestris.ResourceLib.DialogExTemplateControl.ToString">
+            <summary>
+            Return a string representation of the dialog control.
+            </summary>
+            <returns>A single line in the "CLASS name id, dimensions and styles' format.</returns>
         </member>
         <member name="T:Vestris.ResourceLib.DialogResource">
             <summary>
             A dialog template resource.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.DialogResource.Template">
+            <summary>
+            A dialog template structure that describes the dialog.
             </summary>
         </member>
         <member name="M:Vestris.ResourceLib.DialogResource.#ctor(System.IntPtr,System.IntPtr,Vestris.ResourceLib.ResourceId,Vestris.ResourceLib.ResourceId,System.UInt16,System.Int32)">
@@ -496,38 +477,73 @@
             </summary>
             <returns>Multi-line string.</returns>
         </member>
-        <member name="P:Vestris.ResourceLib.DialogResource.Template">
-            <summary>
-            A dialog template structure that describes the dialog.
-            </summary>
-        </member>
         <member name="T:Vestris.ResourceLib.DialogTemplate">
             <summary>
             A container for the DIALOGTEMPLATE structure.
             </summary>
         </member>
+        <member name="P:Vestris.ResourceLib.DialogTemplate.x">
+            <summary>
+            X-coordinate, in dialog box units, of the upper-left corner of the dialog box. 
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.DialogTemplate.y">
+            <summary>
+            Y-coordinate, in dialog box units, of the upper-left corner of the dialog box.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.DialogTemplate.cx">
+            <summary>
+            Width, in dialog box units, of the dialog box.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.DialogTemplate.cy">
+            <summary>
+            Height, in dialog box units, of the dialog box.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.DialogTemplate.Style">
+            <summary>
+            Dialog style.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.DialogTemplate.ExtendedStyle">
+            <summary>
+            Extended dialog style.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.DialogTemplate.ControlCount">
+            <summary>
+            Number of dialog items.
+            </summary>
+        </member>
+        <member name="M:Vestris.ResourceLib.DialogTemplate.#ctor">
+            <summary>
+            A standard dialog structure.
+            </summary>
+        </member>
+        <member name="M:Vestris.ResourceLib.DialogTemplate.Read(System.IntPtr)">
+            <summary>
+            Read the dialog resource.
+            </summary>
+            <param name="lpRes">Pointer to the beginning of the dialog structure.</param>
+        </member>
+        <member name="M:Vestris.ResourceLib.DialogTemplate.Write(System.IO.BinaryWriter)">
+            <summary>
+            Write the dialog template data to a binary stream.
+            </summary>
+            <param name="w">Binary stream.</param>
+        </member>
+        <member name="M:Vestris.ResourceLib.DialogTemplate.ToString">
+            <summary>
+            Returns a string representation of the dialog.
+            </summary>
+            <returns>String in the DIALOG ... format.</returns>
+        </member>
         <member name="T:Vestris.ResourceLib.DialogTemplateBase">
             <summary>
             A dialog template.
             </summary>
-        </member>
-        <member name="M:Vestris.ResourceLib.DialogTemplateBase.ToString">
-            <summary>
-            Dialog template representation in a standard text format.
-            </summary>
-            <returns>Multiline string.</returns>
-        </member>
-        <member name="M:Vestris.ResourceLib.DialogTemplateBase.ToControlString">
-            <summary>
-            String represetnation of a control.
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:Vestris.ResourceLib.DialogTemplateBase.Write(System.IO.BinaryWriter)">
-            <summary>
-            Write the resource to a binary stream.
-            </summary>
-            <param name="w">Binary stream.</param>
         </member>
         <member name="P:Vestris.ResourceLib.DialogTemplateBase.x">
             <summary>
@@ -594,79 +610,85 @@
             Controls within this dialog.
             </summary>
         </member>
-        <member name="M:Vestris.ResourceLib.DialogTemplate.#ctor">
+        <member name="M:Vestris.ResourceLib.DialogTemplateBase.ToString">
             <summary>
-            A standard dialog structure.
+            Dialog template representation in a standard text format.
             </summary>
+            <returns>Multiline string.</returns>
         </member>
-        <member name="M:Vestris.ResourceLib.DialogTemplate.Read(System.IntPtr)">
+        <member name="M:Vestris.ResourceLib.DialogTemplateBase.ToControlString">
             <summary>
-            Read the dialog resource.
+            String represetnation of a control.
             </summary>
-            <param name="lpRes">Pointer to the beginning of the dialog structure.</param>
+            <returns></returns>
         </member>
-        <member name="M:Vestris.ResourceLib.DialogTemplate.Write(System.IO.BinaryWriter)">
+        <member name="M:Vestris.ResourceLib.DialogTemplateBase.Write(System.IO.BinaryWriter)">
             <summary>
-            Write the dialog template data to a binary stream.
+            Write the resource to a binary stream.
             </summary>
             <param name="w">Binary stream.</param>
-        </member>
-        <member name="M:Vestris.ResourceLib.DialogTemplate.ToString">
-            <summary>
-            Returns a string representation of the dialog.
-            </summary>
-            <returns>String in the DIALOG ... format.</returns>
-        </member>
-        <member name="P:Vestris.ResourceLib.DialogTemplate.x">
-            <summary>
-            X-coordinate, in dialog box units, of the upper-left corner of the dialog box. 
-            </summary>
-        </member>
-        <member name="P:Vestris.ResourceLib.DialogTemplate.y">
-            <summary>
-            Y-coordinate, in dialog box units, of the upper-left corner of the dialog box.
-            </summary>
-        </member>
-        <member name="P:Vestris.ResourceLib.DialogTemplate.cx">
-            <summary>
-            Width, in dialog box units, of the dialog box.
-            </summary>
-        </member>
-        <member name="P:Vestris.ResourceLib.DialogTemplate.cy">
-            <summary>
-            Height, in dialog box units, of the dialog box.
-            </summary>
-        </member>
-        <member name="P:Vestris.ResourceLib.DialogTemplate.Style">
-            <summary>
-            Dialog style.
-            </summary>
-        </member>
-        <member name="P:Vestris.ResourceLib.DialogTemplate.ExtendedStyle">
-            <summary>
-            Extended dialog style.
-            </summary>
-        </member>
-        <member name="P:Vestris.ResourceLib.DialogTemplate.ControlCount">
-            <summary>
-            Number of dialog items.
-            </summary>
         </member>
         <member name="T:Vestris.ResourceLib.DialogTemplateControl">
             <summary>
             A container for a control within a dialog template.
             </summary>
         </member>
-        <member name="T:Vestris.ResourceLib.DialogTemplateControlBase">
+        <member name="P:Vestris.ResourceLib.DialogTemplateControl.x">
             <summary>
-            A dialog template.
+            X-coordinate, in dialog box units, of the upper-left corner of the dialog box. 
             </summary>
         </member>
-        <member name="M:Vestris.ResourceLib.DialogTemplateControlBase.Write(System.IO.BinaryWriter)">
+        <member name="P:Vestris.ResourceLib.DialogTemplateControl.y">
+            <summary>
+            Y-coordinate, in dialog box units, of the upper-left corner of the dialog box.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.DialogTemplateControl.cx">
+            <summary>
+            Width, in dialog box units, of the dialog box.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.DialogTemplateControl.cy">
+            <summary>
+            Height, in dialog box units, of the dialog box.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.DialogTemplateControl.Style">
+            <summary>
+            Dialog style.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.DialogTemplateControl.ExtendedStyle">
+            <summary>
+            Extended dialog style.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.DialogTemplateControl.Id">
+            <summary>
+            Control identifier.
+            </summary>
+        </member>
+        <member name="M:Vestris.ResourceLib.DialogTemplateControl.#ctor">
+            <summary>
+            A standard dialog control structure.
+            </summary>
+        </member>
+        <member name="M:Vestris.ResourceLib.DialogTemplateControl.Write(System.IO.BinaryWriter)">
             <summary>
             Write the dialog control to a binary stream.
             </summary>
             <param name="w">Binary stream.</param>
+        </member>
+        <member name="M:Vestris.ResourceLib.DialogTemplateControl.ToString">
+            <summary>
+            String represetnation of a control.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Vestris.ResourceLib.DialogTemplateControlBase">
+            <summary>
+            A dialog template.
+            </summary>
         </member>
         <member name="P:Vestris.ResourceLib.DialogTemplateControlBase.x">
             <summary>
@@ -718,198 +740,11 @@
             Additional creation data.
             </summary>
         </member>
-        <member name="M:Vestris.ResourceLib.DialogTemplateControl.#ctor">
-            <summary>
-            A standard dialog control structure.
-            </summary>
-        </member>
-        <member name="M:Vestris.ResourceLib.DialogTemplateControl.Write(System.IO.BinaryWriter)">
+        <member name="M:Vestris.ResourceLib.DialogTemplateControlBase.Write(System.IO.BinaryWriter)">
             <summary>
             Write the dialog control to a binary stream.
             </summary>
             <param name="w">Binary stream.</param>
-        </member>
-        <member name="M:Vestris.ResourceLib.DialogTemplateControl.ToString">
-            <summary>
-            String represetnation of a control.
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="P:Vestris.ResourceLib.DialogTemplateControl.x">
-            <summary>
-            X-coordinate, in dialog box units, of the upper-left corner of the dialog box. 
-            </summary>
-        </member>
-        <member name="P:Vestris.ResourceLib.DialogTemplateControl.y">
-            <summary>
-            Y-coordinate, in dialog box units, of the upper-left corner of the dialog box.
-            </summary>
-        </member>
-        <member name="P:Vestris.ResourceLib.DialogTemplateControl.cx">
-            <summary>
-            Width, in dialog box units, of the dialog box.
-            </summary>
-        </member>
-        <member name="P:Vestris.ResourceLib.DialogTemplateControl.cy">
-            <summary>
-            Height, in dialog box units, of the dialog box.
-            </summary>
-        </member>
-        <member name="P:Vestris.ResourceLib.DialogTemplateControl.Style">
-            <summary>
-            Dialog style.
-            </summary>
-        </member>
-        <member name="P:Vestris.ResourceLib.DialogTemplateControl.ExtendedStyle">
-            <summary>
-            Extended dialog style.
-            </summary>
-        </member>
-        <member name="P:Vestris.ResourceLib.DialogTemplateControl.Id">
-            <summary>
-            Control identifier.
-            </summary>
-        </member>
-        <member name="T:Vestris.ResourceLib.DialogExTemplateControl">
-            <summary>
-            A container for the DIALOGTEMPLATEEX structure.
-            </summary>
-        </member>
-        <member name="M:Vestris.ResourceLib.DialogExTemplateControl.#ctor">
-            <summary>
-            An extended dialog control template structure.
-            </summary>
-        </member>
-        <member name="M:Vestris.ResourceLib.DialogExTemplateControl.Read(System.IntPtr)">
-            <summary>
-            Read the dialog control.
-            </summary>
-            <param name="lpRes">Pointer to the beginning of the dialog structure.</param>
-        </member>
-        <member name="M:Vestris.ResourceLib.DialogExTemplateControl.Write(System.IO.BinaryWriter)">
-            <summary>
-            Write the dialog control to a binary stream.
-            </summary>
-            <param name="w">Binary stream.</param>
-        </member>
-        <member name="M:Vestris.ResourceLib.DialogExTemplateControl.ToString">
-            <summary>
-            Return a string representation of the dialog control.
-            </summary>
-            <returns>A single line in the "CLASS name id, dimensions and styles' format.</returns>
-        </member>
-        <member name="P:Vestris.ResourceLib.DialogExTemplateControl.x">
-            <summary>
-            X-coordinate, in dialog box units, of the upper-left corner of the dialog box. 
-            </summary>
-        </member>
-        <member name="P:Vestris.ResourceLib.DialogExTemplateControl.y">
-            <summary>
-            Y-coordinate, in dialog box units, of the upper-left corner of the dialog box.
-            </summary>
-        </member>
-        <member name="P:Vestris.ResourceLib.DialogExTemplateControl.cx">
-            <summary>
-            Width, in dialog box units, of the dialog box.
-            </summary>
-        </member>
-        <member name="P:Vestris.ResourceLib.DialogExTemplateControl.cy">
-            <summary>
-            Height, in dialog box units, of the dialog box.
-            </summary>
-        </member>
-        <member name="P:Vestris.ResourceLib.DialogExTemplateControl.Style">
-            <summary>
-            Dialog style.
-            </summary>
-        </member>
-        <member name="P:Vestris.ResourceLib.DialogExTemplateControl.ExtendedStyle">
-            <summary>
-            Extended dialog style.
-            </summary>
-        </member>
-        <member name="P:Vestris.ResourceLib.DialogExTemplateControl.Id">
-            <summary>
-            Control identifier.
-            </summary>
-        </member>
-        <member name="T:Vestris.ResourceLib.DialogExTemplate">
-            <summary>
-            A container for the DIALOGTEMPLATEEX structure.
-            </summary>
-        </member>
-        <member name="M:Vestris.ResourceLib.DialogExTemplate.#ctor">
-            <summary>
-            An extended dialog structure.
-            </summary>
-        </member>
-        <member name="M:Vestris.ResourceLib.DialogExTemplate.Read(System.IntPtr)">
-            <summary>
-            Read the dialog resource.
-            </summary>
-            <param name="lpRes">Pointer to the beginning of the dialog structure.</param>
-        </member>
-        <member name="M:Vestris.ResourceLib.DialogExTemplate.Write(System.IO.BinaryWriter)">
-            <summary>
-            Write dialog control to a binary stream.
-            </summary>
-            <param name="w">Binary stream.</param>
-        </member>
-        <member name="M:Vestris.ResourceLib.DialogExTemplate.ToString">
-            <summary>
-            String representation of the dialog.
-            </summary>
-            <returns>String in the DIALOGEX [dialog] format.</returns>
-        </member>
-        <member name="P:Vestris.ResourceLib.DialogExTemplate.CharacterSet">
-            <summary>
-            Indicates the character set to use.
-            </summary>
-        </member>
-        <member name="P:Vestris.ResourceLib.DialogExTemplate.x">
-            <summary>
-            X-coordinate, in dialog box units, of the upper-left corner of the dialog box. 
-            </summary>
-        </member>
-        <member name="P:Vestris.ResourceLib.DialogExTemplate.y">
-            <summary>
-            Y-coordinate, in dialog box units, of the upper-left corner of the dialog box.
-            </summary>
-        </member>
-        <member name="P:Vestris.ResourceLib.DialogExTemplate.cx">
-            <summary>
-            Width, in dialog box units, of the dialog box.
-            </summary>
-        </member>
-        <member name="P:Vestris.ResourceLib.DialogExTemplate.cy">
-            <summary>
-            Height, in dialog box units, of the dialog box.
-            </summary>
-        </member>
-        <member name="P:Vestris.ResourceLib.DialogExTemplate.Style">
-            <summary>
-            Dialog style.
-            </summary>
-        </member>
-        <member name="P:Vestris.ResourceLib.DialogExTemplate.ExtendedStyle">
-            <summary>
-            Extended dialog style.
-            </summary>
-        </member>
-        <member name="P:Vestris.ResourceLib.DialogExTemplate.Weight">
-            <summary>
-            Weight of the font. 
-            </summary>
-        </member>
-        <member name="P:Vestris.ResourceLib.DialogExTemplate.Italic">
-            <summary>
-            Indicates whether the font is italic.
-            </summary>
-        </member>
-        <member name="P:Vestris.ResourceLib.DialogExTemplate.ControlCount">
-            <summary>
-            Number of dialog items.
-            </summary>
         </member>
         <member name="T:Vestris.ResourceLib.DialogTemplateUtil">
             <summary>
@@ -946,6 +781,57 @@
             <param name="style">Dialog or control style.</param>
             <returns>String in the "s1 | s2 | ... | s3" format.</returns>
         </member>
+        <member name="T:Vestris.ResourceLib.DirectoryResource`1">
+            <summary>
+            This structure depicts the organization of data in a hardware-independent icon resource.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.DirectoryResource`1.ResourceType">
+            <summary>
+            Returns the type of the resource in this group.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.DirectoryResource`1.Icons">
+            <summary>
+            Icons contained in this hardware-independent icon resource.
+            </summary>
+        </member>
+        <member name="M:Vestris.ResourceLib.DirectoryResource`1.#ctor(System.IntPtr,System.IntPtr,Vestris.ResourceLib.ResourceId,Vestris.ResourceLib.ResourceId,System.UInt16,System.Int32)">
+            <summary>
+            A hardware-independent icon resource.
+            </summary>
+            <param name="hModule">Module handle.</param>
+            <param name="hResource">Resource ID.</param>
+            <param name="type">Resource type.</param>
+            <param name="name">Resource name.</param>
+            <param name="language">Language ID.</param>
+            <param name="size">Resource size.</param>
+        </member>
+        <member name="M:Vestris.ResourceLib.DirectoryResource`1.#ctor(Vestris.ResourceLib.Kernel32.ResourceTypes)">
+            <summary>
+            A new hardware-independent icon resource.
+            </summary>
+        </member>
+        <member name="M:Vestris.ResourceLib.DirectoryResource`1.SaveTo(System.String)">
+            <summary>
+            Save a hardware-independent icon resource to an executable file.
+            </summary>
+            <param name="filename">Name of an executable file (.exe or .dll).</param>
+        </member>
+        <member name="M:Vestris.ResourceLib.DirectoryResource`1.Read(System.IntPtr,System.IntPtr)">
+            <summary>
+            Read a hardware-independent icon resource from a loaded module.
+            </summary>
+            <param name="hModule">Loaded executable module.</param>
+            <param name="lpRes">Pointer to the beginning of a hardware-independent icon resource.</param>
+            <returns>Pointer to the end of the hardware-independent icon resource.</returns>
+        </member>
+        <member name="M:Vestris.ResourceLib.DirectoryResource`1.Write(System.IO.BinaryWriter)">
+            <summary>
+            Write a hardware-independent icon resource to a binary stream.
+            </summary>
+            <param name="w">Binary stream.</param>
+        </member>
         <member name="T:Vestris.ResourceLib.FixedFileInfo">
             <summary>
             Fixed file information.
@@ -956,28 +842,16 @@
             Default Windows fixed file information.
             </summary>
         </member>
+        <member name="P:Vestris.ResourceLib.FixedFileInfo.Value">
+            <summary>
+            Fixed file info structure.
+            </summary>
+        </member>
         <member name="M:Vestris.ResourceLib.FixedFileInfo.Read(System.IntPtr)">
             <summary>
             Read the fixed file information structure.
             </summary>
             <param name="lpRes">Address in memory.</param>
-        </member>
-        <member name="M:Vestris.ResourceLib.FixedFileInfo.Write(System.IO.BinaryWriter)">
-            <summary>
-            Write fixed file information to a binary stream.
-            </summary>
-            <param name="w">Binary stream.</param>
-        </member>
-        <member name="M:Vestris.ResourceLib.FixedFileInfo.ToString">
-            <summary>
-            String representation of the fixed file info.
-            </summary>
-            <returns>String representation of the fixed file info.</returns>
-        </member>
-        <member name="P:Vestris.ResourceLib.FixedFileInfo.Value">
-            <summary>
-            Fixed file info structure.
-            </summary>
         </member>
         <member name="P:Vestris.ResourceLib.FixedFileInfo.FileVersion">
             <summary>
@@ -994,33 +868,27 @@
             Gets or sets a bitmask that specifies the Boolean attributes of the file.
             </summary>
         </member>
+        <member name="M:Vestris.ResourceLib.FixedFileInfo.Write(System.IO.BinaryWriter)">
+            <summary>
+            Write fixed file information to a binary stream.
+            </summary>
+            <param name="w">Binary stream.</param>
+        </member>
         <member name="P:Vestris.ResourceLib.FixedFileInfo.Size">
             <summary>
             Size of the VS_FIXEDFILEINFO structure.
             </summary>
         </member>
+        <member name="M:Vestris.ResourceLib.FixedFileInfo.ToString">
+            <summary>
+            String representation of the fixed file info.
+            </summary>
+            <returns>String representation of the fixed file info.</returns>
+        </member>
         <member name="T:Vestris.ResourceLib.FontDirectoryEntry">
             <summary>
             A font directory entry.
             </summary>
-        </member>
-        <member name="M:Vestris.ResourceLib.FontDirectoryEntry.#ctor">
-            <summary>
-            A new font directory entry.
-            </summary>
-        </member>
-        <member name="M:Vestris.ResourceLib.FontDirectoryEntry.Read(System.IntPtr)">
-            <summary>
-            Read the font directory entry.
-            </summary>
-            <param name="lpRes">Pointer in memory.</param>
-            <returns>Pointer to the end of the font directory entry.</returns>
-        </member>
-        <member name="M:Vestris.ResourceLib.FontDirectoryEntry.Write(System.IO.BinaryWriter)">
-            <summary>
-            Write the font directory entry to a binary stream.
-            </summary>
-            <param name="w">Binary stream.</param>
         </member>
         <member name="P:Vestris.ResourceLib.FontDirectoryEntry.FontOrdinal">
             <summary>
@@ -1042,9 +910,32 @@
             Font information.
             </summary>
         </member>
+        <member name="M:Vestris.ResourceLib.FontDirectoryEntry.#ctor">
+            <summary>
+            A new font directory entry.
+            </summary>
+        </member>
+        <member name="M:Vestris.ResourceLib.FontDirectoryEntry.Read(System.IntPtr)">
+            <summary>
+            Read the font directory entry.
+            </summary>
+            <param name="lpRes">Pointer in memory.</param>
+            <returns>Pointer to the end of the font directory entry.</returns>
+        </member>
+        <member name="M:Vestris.ResourceLib.FontDirectoryEntry.Write(System.IO.BinaryWriter)">
+            <summary>
+            Write the font directory entry to a binary stream.
+            </summary>
+            <param name="w">Binary stream.</param>
+        </member>
         <member name="T:Vestris.ResourceLib.FontDirectoryResource">
             <summary>
             A font directory, RT_FONTDIR resource.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.FontDirectoryResource.Fonts">
+            <summary>
+            Number of fonts in this directory.
             </summary>
         </member>
         <member name="M:Vestris.ResourceLib.FontDirectoryResource.#ctor">
@@ -1077,62 +968,9 @@
             </summary>
             <param name="w">Binary stream.</param>
         </member>
-        <member name="P:Vestris.ResourceLib.FontDirectoryResource.Fonts">
-            <summary>
-            Number of fonts in this directory.
-            </summary>
-        </member>
         <member name="T:Vestris.ResourceLib.FontResource">
             <summary>
             A font, RT_FONT resource.
-            </summary>
-        </member>
-        <member name="T:Vestris.ResourceLib.GenericResource">
-            <summary>
-            A generic resource.
-            </summary>
-        </member>
-        <member name="F:Vestris.ResourceLib.GenericResource._data">
-            <summary>
-            Raw resource data.
-            </summary>
-        </member>
-        <member name="M:Vestris.ResourceLib.GenericResource.#ctor(System.IntPtr,System.IntPtr,Vestris.ResourceLib.ResourceId,Vestris.ResourceLib.ResourceId,System.UInt16,System.Int32)">
-            <summary>
-            An unstructured generic resource embedded in an executable module.
-            </summary>
-            <param name="hModule">Module handle.</param>
-            <param name="hResource">Resource handle.</param>
-            <param name="type">Type of resource.</param>
-            <param name="name">Resource name.</param>
-            <param name="language">Language id.</param>
-            <param name="size">Resource size.</param>
-        </member>
-        <member name="M:Vestris.ResourceLib.GenericResource.#ctor(Vestris.ResourceLib.ResourceId,Vestris.ResourceLib.ResourceId,System.UInt16)">
-            <summary>
-            A generic resource.
-            </summary>
-            <param name="name">Resource name.</param>
-            <param name="type">Resource type.</param>
-            <param name="language">Resource language.</param>
-        </member>
-        <member name="M:Vestris.ResourceLib.GenericResource.Read(System.IntPtr,System.IntPtr)">
-            <summary>
-            Read a generic resource.
-            </summary>
-            <param name="hModule">Module handle.</param>
-            <param name="lpRes">Pointer to the beginning of a resource.</param>
-            <returns>Pointer to the end of the resource.</returns>
-        </member>
-        <member name="M:Vestris.ResourceLib.GenericResource.Write(System.IO.BinaryWriter)">
-            <summary>
-            Write the resource to a binary stream.
-            </summary>
-            <param name="w">Binary stream.</param>
-        </member>
-        <member name="P:Vestris.ResourceLib.GenericResource.Data">
-            <summary>
-            Raw resource data.
             </summary>
         </member>
         <member name="M:Vestris.ResourceLib.FontResource.#ctor">
@@ -1169,152 +1007,6 @@
             <summary>
             Gdi32.dll interop functions.
             </summary>
-        </member>
-        <member name="M:Vestris.ResourceLib.Gdi32.SetDIBitsToDevice(System.IntPtr,System.Int32,System.Int32,System.UInt32,System.UInt32,System.Int32,System.Int32,System.UInt32,System.UInt32,System.Byte[],Vestris.ResourceLib.Gdi32.BITMAPINFO@,System.UInt32)">
-            <summary>
-            Set the pixels in the specified rectangle on the device that is associated with the destination device 
-            context using color data from a DIB, JPEG, or PNG image.
-            http://msdn.microsoft.com/en-us/library/dd162974(VS.85).aspx
-            </summary>
-            <param name="hdc">A handle to the device context.</param>
-            <param name="XDest">The x-coordinate, in logical units, of the upper-left corner of the destination rectangle.</param>
-            <param name="YDest">The y-coordinate, in logical units, of the upper-left corner of the destination rectangle.</param>
-            <param name="dwWidth">The width, in logical units, of the image.</param>
-            <param name="dwHeight">The height, in logical units, of the image.</param>
-            <param name="XSrc">The x-coordinate, in logical units, of the lower-left corner of the image.</param>
-            <param name="YSrc">The y-coordinate, in logical units, of the lower-left corner of the image.</param>
-            <param name="uStartScan">The starting scan line in the image.</param>
-            <param name="cScanLines">The number of DIB scan lines contained in the array pointed to by the lpvBits parameter.</param>
-            <param name="lpvBits">A pointer to the color data stored as an array of bytes.</param>
-            <param name="lpbmi">A pointer to a BITMAPINFOHEADER structure that contains information about the DIB.</param>
-            <param name="fuColorUse">Indicates whether the bmiColors member of the BITMAPINFOHEADER structure contains explicit red, green, blue (RGB) values or indexes into a palette.</param>
-            <returns>
-            If the function succeeds, the return value is the number of scan lines set.
-            If zero scan lines are set (such as when dwHeight is 0) or the function fails, the function returns zero.
-            If the driver cannot support the JPEG or PNG file image passed to SetDIBitsToDevice, the function will fail and return GDI_ERROR. 
-            </returns>
-        </member>
-        <member name="M:Vestris.ResourceLib.Gdi32.SetDIBitsToDevice(System.IntPtr,System.Int32,System.Int32,System.UInt32,System.UInt32,System.Int32,System.Int32,System.UInt32,System.UInt32,System.IntPtr,System.IntPtr,System.UInt32)">
-            <summary>
-            Set the pixels in the specified rectangle on the device that is associated with the destination device 
-            context using color data from a DIB, JPEG, or PNG image.
-            http://msdn.microsoft.com/en-us/library/dd162974(VS.85).aspx
-            </summary>
-            <param name="hdc">A handle to the device context.</param>
-            <param name="XDest">The x-coordinate, in logical units, of the upper-left corner of the destination rectangle.</param>
-            <param name="YDest">The y-coordinate, in logical units, of the upper-left corner of the destination rectangle.</param>
-            <param name="dwWidth">The width, in logical units, of the image.</param>
-            <param name="dwHeight">The height, in logical units, of the image.</param>
-            <param name="XSrc">The x-coordinate, in logical units, of the lower-left corner of the image.</param>
-            <param name="YSrc">The y-coordinate, in logical units, of the lower-left corner of the image.</param>
-            <param name="uStartScan">The starting scan line in the image.</param>
-            <param name="cScanLines">The number of DIB scan lines contained in the array pointed to by the lpvBits parameter.</param>
-            <param name="lpvBits">A pointer to the color data stored as an array of bytes.</param>
-            <param name="lpbmi">A pointer to a BITMAPINFOHEADER structure that contains information about the DIB.</param>
-            <param name="fuColorUse">Indicates whether the bmiColors member of the BITMAPINFOHEADER structure contains explicit red, green, blue (RGB) values or indexes into a palette.</param>
-            <returns>
-            If the function succeeds, the return value is the number of scan lines set.
-            If zero scan lines are set (such as when dwHeight is 0) or the function fails, the function returns zero.
-            If the driver cannot support the JPEG or PNG file image passed to SetDIBitsToDevice, the function will fail and return GDI_ERROR. 
-            </returns>
-        </member>
-        <member name="M:Vestris.ResourceLib.Gdi32.GetDIBits(System.IntPtr,System.IntPtr,System.UInt32,System.UInt32,System.Byte[],Vestris.ResourceLib.Gdi32.BITMAPINFO@,System.UInt32)">
-            <summary>
-            Retrieves the bits of the specified compatible bitmap and copies them into a buffer as 
-            a DIB using the specified format
-            </summary>
-            <param name="hdc">A handle to the device context.</param>
-            <param name="hbmp">A handle to the bitmap. This must be a compatible bitmap (DDB).</param>
-            <param name="uStartScan">The first scan line to retrieve.</param>
-            <param name="cScanLines">The number of scan lines to retrieve.</param>
-            <param name="lpvBits">A pointer to a buffer to receive the bitmap data.</param>
-            <param name="lpbmi">A pointer to a BITMAPINFO structure that specifies the desired format for the DIB data.</param>
-            <param name="uUsage">The format of the bmiColors member of the BITMAPINFO structure.</param>
-            <returns>
-            If the lpvBits parameter is non-NULL and the function succeeds, the return value is the number of scan lines copied from the bitmap.
-            If the lpvBits parameter is NULL and GetDIBits successfully fills the BITMAPINFO structure, the return value is non-zero.
-            If the function fails, the return value is zero.
-            </returns>
-        </member>
-        <member name="M:Vestris.ResourceLib.Gdi32.CreateDIBSection(System.IntPtr,Vestris.ResourceLib.Gdi32.BITMAPINFO@,System.UInt32,System.IntPtr@,System.IntPtr,System.UInt32)">
-            <summary>
-            Create a DIB that applications can write to directly. The function gives you a pointer to the location 
-            of the bitmap bit values. You can supply a handle to a file-mapping object that the function will use 
-            to create the bitmap, or you can let the system allocate the memory for the bitmap.
-            </summary>
-            <param name="hdc">Handle to a device context.</param>
-            <param name="pbmi">A pointer to a BITMAPINFO structure that specifies various attributes of the DIB, including the bitmap dimensions and colors.</param>
-            <param name="iUsage">The type of data contained in the bmiColors array member of the BITMAPINFO structure pointed to by pbmi (either logical palette indexes or literal RGB values).</param>
-            <param name="ppvBits">A pointer to a variable that receives a pointer to the location of the DIB bit values.</param>
-            <param name="hSection">A handle to a file-mapping object that the function will use to create the DIB. This parameter can be NULL.</param>
-            <param name="dwOffset">The offset from the beginning of the file-mapping object referenced by hSection where storage for the bitmap bit values is to begin.</param>
-            <returns>
-            If the function succeeds, the return value is a handle to the newly created DIB, and *ppvBits points to the bitmap bit values.
-            If the function fails, the return value is NULL, and *ppvBits is NULL.
-            </returns>
-        </member>
-        <member name="M:Vestris.ResourceLib.Gdi32.CreateCompatibleDC(System.IntPtr)">
-            <summary>
-            Creates a memory device context (DC) compatible with the specified device.
-            </summary>
-            <param name="hdc">Handle to an existing device context.</param>
-            <returns>
-            The handle to a memory device context indicates success.
-            NULL indicates failure.
-            </returns>
-        </member>
-        <member name="M:Vestris.ResourceLib.Gdi32.CreateDC(System.String,System.String,System.String,System.IntPtr)">
-            <summary>
-            
-            </summary>
-            <param name="lpDriverName">Specifies either DISPLAY or the name of a specific display device or the name of a print provider, which is usually WINSPOOL.</param>
-            <param name="lpDeviceName">Specifies the name of the specific output device being used, as shown by the Print Manager (for example, Epson FX-80).</param>
-            <param name="lpOutput">This parameter is ignored and should be set to NULL. It is provided only for compatibility with 16-bit Windows.</param>
-            <param name="lpInitData">A pointer to a DEVMODE structure containing device-specific initialization data for the device driver.</param>
-            <returns></returns>
-        </member>
-        <member name="M:Vestris.ResourceLib.Gdi32.CreateCompatibleBitmap(System.IntPtr,System.Int32,System.Int32)">
-            <summary>
-            Creates a bitmap compatible with the device that is associated with the specified device context.
-            </summary>
-            <param name="hdc">A handle to a device context.</param>
-            <param name="nWidth">The bitmap width, in pixels.</param>
-            <param name="nHeight">The bitmap height, in pixels.</param>
-            <returns>
-            If the function succeeds, the return value is a handle to the compatible bitmap (DDB).
-            If the function fails, the return value is NULL.
-            </returns>
-        </member>
-        <member name="M:Vestris.ResourceLib.Gdi32.SelectObject(System.IntPtr,System.IntPtr)">
-            <summary>
-            Selects an object into a specified device context. The new object replaces the previous object of the same type. 
-            </summary>
-            <param name="hdc">Handle to the device context.</param>
-            <param name="hgdiobj">Handle to the object to be selected.</param>
-            <returns>
-            If the selected object is not a region, the handle of the object being replaced indicates success. 
-            If the selected object is a region, one of the following values indicates success. 
-            </returns>
-        </member>
-        <member name="M:Vestris.ResourceLib.Gdi32.DeleteObject(System.IntPtr)">
-            <summary>
-            Deletes a logical pen, brush, font, bitmap, region, or palette, freeing all system resources associated with the object. 
-            </summary>
-            <param name="hObject">Handle to a logical pen, brush, font, bitmap, region, or palette.</param>
-            <returns>
-            Nonzero indicates success. 
-            Zero indicates that the specified handle is not valid or that the handle is currently selected into a device context.
-            </returns>
-        </member>
-        <member name="M:Vestris.ResourceLib.Gdi32.DeleteDC(System.IntPtr)">
-            <summary>
-            Deletes the specified device context.
-            </summary>
-            <param name="hdc">A handle to the device context.</param>
-            <returns>
-            If the function succeeds, the return value is nonzero.
-            If the function fails, the return value is zero.
-            </returns>
         </member>
         <member name="T:Vestris.ResourceLib.Gdi32.BitmapCompression">
             <summary>
@@ -1500,6 +1192,89 @@
             The offset, in bytes, from the beginning of the BITMAPFILEHEADER structure to the bitmap bits.
             </summary>
         </member>
+        <member name="M:Vestris.ResourceLib.Gdi32.SetDIBitsToDevice(System.IntPtr,System.Int32,System.Int32,System.UInt32,System.UInt32,System.Int32,System.Int32,System.UInt32,System.UInt32,System.Byte[],Vestris.ResourceLib.Gdi32.BITMAPINFO@,System.UInt32)">
+            <summary>
+            Set the pixels in the specified rectangle on the device that is associated with the destination device 
+            context using color data from a DIB, JPEG, or PNG image.
+            http://msdn.microsoft.com/en-us/library/dd162974(VS.85).aspx
+            </summary>
+            <param name="hdc">A handle to the device context.</param>
+            <param name="XDest">The x-coordinate, in logical units, of the upper-left corner of the destination rectangle.</param>
+            <param name="YDest">The y-coordinate, in logical units, of the upper-left corner of the destination rectangle.</param>
+            <param name="dwWidth">The width, in logical units, of the image.</param>
+            <param name="dwHeight">The height, in logical units, of the image.</param>
+            <param name="XSrc">The x-coordinate, in logical units, of the lower-left corner of the image.</param>
+            <param name="YSrc">The y-coordinate, in logical units, of the lower-left corner of the image.</param>
+            <param name="uStartScan">The starting scan line in the image.</param>
+            <param name="cScanLines">The number of DIB scan lines contained in the array pointed to by the lpvBits parameter.</param>
+            <param name="lpvBits">A pointer to the color data stored as an array of bytes.</param>
+            <param name="lpbmi">A pointer to a BITMAPINFOHEADER structure that contains information about the DIB.</param>
+            <param name="fuColorUse">Indicates whether the bmiColors member of the BITMAPINFOHEADER structure contains explicit red, green, blue (RGB) values or indexes into a palette.</param>
+            <returns>
+            If the function succeeds, the return value is the number of scan lines set.
+            If zero scan lines are set (such as when dwHeight is 0) or the function fails, the function returns zero.
+            If the driver cannot support the JPEG or PNG file image passed to SetDIBitsToDevice, the function will fail and return GDI_ERROR. 
+            </returns>
+        </member>
+        <member name="M:Vestris.ResourceLib.Gdi32.SetDIBitsToDevice(System.IntPtr,System.Int32,System.Int32,System.UInt32,System.UInt32,System.Int32,System.Int32,System.UInt32,System.UInt32,System.IntPtr,System.IntPtr,System.UInt32)">
+            <summary>
+            Set the pixels in the specified rectangle on the device that is associated with the destination device 
+            context using color data from a DIB, JPEG, or PNG image.
+            http://msdn.microsoft.com/en-us/library/dd162974(VS.85).aspx
+            </summary>
+            <param name="hdc">A handle to the device context.</param>
+            <param name="XDest">The x-coordinate, in logical units, of the upper-left corner of the destination rectangle.</param>
+            <param name="YDest">The y-coordinate, in logical units, of the upper-left corner of the destination rectangle.</param>
+            <param name="dwWidth">The width, in logical units, of the image.</param>
+            <param name="dwHeight">The height, in logical units, of the image.</param>
+            <param name="XSrc">The x-coordinate, in logical units, of the lower-left corner of the image.</param>
+            <param name="YSrc">The y-coordinate, in logical units, of the lower-left corner of the image.</param>
+            <param name="uStartScan">The starting scan line in the image.</param>
+            <param name="cScanLines">The number of DIB scan lines contained in the array pointed to by the lpvBits parameter.</param>
+            <param name="lpvBits">A pointer to the color data stored as an array of bytes.</param>
+            <param name="lpbmi">A pointer to a BITMAPINFOHEADER structure that contains information about the DIB.</param>
+            <param name="fuColorUse">Indicates whether the bmiColors member of the BITMAPINFOHEADER structure contains explicit red, green, blue (RGB) values or indexes into a palette.</param>
+            <returns>
+            If the function succeeds, the return value is the number of scan lines set.
+            If zero scan lines are set (such as when dwHeight is 0) or the function fails, the function returns zero.
+            If the driver cannot support the JPEG or PNG file image passed to SetDIBitsToDevice, the function will fail and return GDI_ERROR. 
+            </returns>
+        </member>
+        <member name="M:Vestris.ResourceLib.Gdi32.GetDIBits(System.IntPtr,System.IntPtr,System.UInt32,System.UInt32,System.Byte[],Vestris.ResourceLib.Gdi32.BITMAPINFO@,System.UInt32)">
+            <summary>
+            Retrieves the bits of the specified compatible bitmap and copies them into a buffer as 
+            a DIB using the specified format
+            </summary>
+            <param name="hdc">A handle to the device context.</param>
+            <param name="hbmp">A handle to the bitmap. This must be a compatible bitmap (DDB).</param>
+            <param name="uStartScan">The first scan line to retrieve.</param>
+            <param name="cScanLines">The number of scan lines to retrieve.</param>
+            <param name="lpvBits">A pointer to a buffer to receive the bitmap data.</param>
+            <param name="lpbmi">A pointer to a BITMAPINFO structure that specifies the desired format for the DIB data.</param>
+            <param name="uUsage">The format of the bmiColors member of the BITMAPINFO structure.</param>
+            <returns>
+            If the lpvBits parameter is non-NULL and the function succeeds, the return value is the number of scan lines copied from the bitmap.
+            If the lpvBits parameter is NULL and GetDIBits successfully fills the BITMAPINFO structure, the return value is non-zero.
+            If the function fails, the return value is zero.
+            </returns>
+        </member>
+        <member name="M:Vestris.ResourceLib.Gdi32.CreateDIBSection(System.IntPtr,Vestris.ResourceLib.Gdi32.BITMAPINFO@,System.UInt32,System.IntPtr@,System.IntPtr,System.UInt32)">
+            <summary>
+            Create a DIB that applications can write to directly. The function gives you a pointer to the location 
+            of the bitmap bit values. You can supply a handle to a file-mapping object that the function will use 
+            to create the bitmap, or you can let the system allocate the memory for the bitmap.
+            </summary>
+            <param name="hdc">Handle to a device context.</param>
+            <param name="pbmi">A pointer to a BITMAPINFO structure that specifies various attributes of the DIB, including the bitmap dimensions and colors.</param>
+            <param name="iUsage">The type of data contained in the bmiColors array member of the BITMAPINFO structure pointed to by pbmi (either logical palette indexes or literal RGB values).</param>
+            <param name="ppvBits">A pointer to a variable that receives a pointer to the location of the DIB bit values.</param>
+            <param name="hSection">A handle to a file-mapping object that the function will use to create the DIB. This parameter can be NULL.</param>
+            <param name="dwOffset">The offset from the beginning of the file-mapping object referenced by hSection where storage for the bitmap bit values is to begin.</param>
+            <returns>
+            If the function succeeds, the return value is a handle to the newly created DIB, and *ppvBits points to the bitmap bit values.
+            If the function fails, the return value is NULL, and *ppvBits is NULL.
+            </returns>
+        </member>
         <member name="T:Vestris.ResourceLib.Gdi32.DIBColors">
             <summary>
             Defines how to interpret the values in the color table of a DIB.
@@ -1527,82 +1302,116 @@
             
             </summary>
         </member>
-        <member name="T:Vestris.ResourceLib.CursorDirectoryResource">
+        <member name="M:Vestris.ResourceLib.Gdi32.CreateCompatibleDC(System.IntPtr)">
             <summary>
-            This structure depicts the organization of data in a hardware-independent cursor resource.
+            Creates a memory device context (DC) compatible with the specified device.
+            </summary>
+            <param name="hdc">Handle to an existing device context.</param>
+            <returns>
+            The handle to a memory device context indicates success.
+            NULL indicates failure.
+            </returns>
+        </member>
+        <member name="M:Vestris.ResourceLib.Gdi32.CreateDC(System.String,System.String,System.String,System.IntPtr)">
+            <summary>
+            
+            </summary>
+            <param name="lpDriverName">Specifies either DISPLAY or the name of a specific display device or the name of a print provider, which is usually WINSPOOL.</param>
+            <param name="lpDeviceName">Specifies the name of the specific output device being used, as shown by the Print Manager (for example, Epson FX-80).</param>
+            <param name="lpOutput">This parameter is ignored and should be set to NULL. It is provided only for compatibility with 16-bit Windows.</param>
+            <param name="lpInitData">A pointer to a DEVMODE structure containing device-specific initialization data for the device driver.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Vestris.ResourceLib.Gdi32.CreateCompatibleBitmap(System.IntPtr,System.Int32,System.Int32)">
+            <summary>
+            Creates a bitmap compatible with the device that is associated with the specified device context.
+            </summary>
+            <param name="hdc">A handle to a device context.</param>
+            <param name="nWidth">The bitmap width, in pixels.</param>
+            <param name="nHeight">The bitmap height, in pixels.</param>
+            <returns>
+            If the function succeeds, the return value is a handle to the compatible bitmap (DDB).
+            If the function fails, the return value is NULL.
+            </returns>
+        </member>
+        <member name="M:Vestris.ResourceLib.Gdi32.SelectObject(System.IntPtr,System.IntPtr)">
+            <summary>
+            Selects an object into a specified device context. The new object replaces the previous object of the same type. 
+            </summary>
+            <param name="hdc">Handle to the device context.</param>
+            <param name="hgdiobj">Handle to the object to be selected.</param>
+            <returns>
+            If the selected object is not a region, the handle of the object being replaced indicates success. 
+            If the selected object is a region, one of the following values indicates success. 
+            </returns>
+        </member>
+        <member name="M:Vestris.ResourceLib.Gdi32.DeleteObject(System.IntPtr)">
+            <summary>
+            Deletes a logical pen, brush, font, bitmap, region, or palette, freeing all system resources associated with the object. 
+            </summary>
+            <param name="hObject">Handle to a logical pen, brush, font, bitmap, region, or palette.</param>
+            <returns>
+            Nonzero indicates success. 
+            Zero indicates that the specified handle is not valid or that the handle is currently selected into a device context.
+            </returns>
+        </member>
+        <member name="M:Vestris.ResourceLib.Gdi32.DeleteDC(System.IntPtr)">
+            <summary>
+            Deletes the specified device context.
+            </summary>
+            <param name="hdc">A handle to the device context.</param>
+            <returns>
+            If the function succeeds, the return value is nonzero.
+            If the function fails, the return value is zero.
+            </returns>
+        </member>
+        <member name="T:Vestris.ResourceLib.GenericResource">
+            <summary>
+            A generic resource.
             </summary>
         </member>
-        <member name="T:Vestris.ResourceLib.DirectoryResource`1">
+        <member name="F:Vestris.ResourceLib.GenericResource._data">
             <summary>
-            This structure depicts the organization of data in a hardware-independent icon resource.
+            Raw resource data.
             </summary>
         </member>
-        <member name="M:Vestris.ResourceLib.DirectoryResource`1.#ctor(System.IntPtr,System.IntPtr,Vestris.ResourceLib.ResourceId,Vestris.ResourceLib.ResourceId,System.UInt16,System.Int32)">
+        <member name="P:Vestris.ResourceLib.GenericResource.Data">
             <summary>
-            A hardware-independent icon resource.
+            Raw resource data.
+            </summary>
+        </member>
+        <member name="M:Vestris.ResourceLib.GenericResource.#ctor(System.IntPtr,System.IntPtr,Vestris.ResourceLib.ResourceId,Vestris.ResourceLib.ResourceId,System.UInt16,System.Int32)">
+            <summary>
+            An unstructured generic resource embedded in an executable module.
             </summary>
             <param name="hModule">Module handle.</param>
-            <param name="hResource">Resource ID.</param>
-            <param name="type">Resource type.</param>
+            <param name="hResource">Resource handle.</param>
+            <param name="type">Type of resource.</param>
             <param name="name">Resource name.</param>
-            <param name="language">Language ID.</param>
+            <param name="language">Language id.</param>
             <param name="size">Resource size.</param>
         </member>
-        <member name="M:Vestris.ResourceLib.DirectoryResource`1.#ctor(Vestris.ResourceLib.Kernel32.ResourceTypes)">
+        <member name="M:Vestris.ResourceLib.GenericResource.#ctor(Vestris.ResourceLib.ResourceId,Vestris.ResourceLib.ResourceId,System.UInt16)">
             <summary>
-            A new hardware-independent icon resource.
+            A generic resource.
             </summary>
+            <param name="name">Resource name.</param>
+            <param name="type">Resource type.</param>
+            <param name="language">Resource language.</param>
         </member>
-        <member name="M:Vestris.ResourceLib.DirectoryResource`1.SaveTo(System.String)">
+        <member name="M:Vestris.ResourceLib.GenericResource.Read(System.IntPtr,System.IntPtr)">
             <summary>
-            Save a hardware-independent icon resource to an executable file.
+            Read a generic resource.
             </summary>
-            <param name="filename">Name of an executable file (.exe or .dll).</param>
+            <param name="hModule">Module handle.</param>
+            <param name="lpRes">Pointer to the beginning of a resource.</param>
+            <returns>Pointer to the end of the resource.</returns>
         </member>
-        <member name="M:Vestris.ResourceLib.DirectoryResource`1.Read(System.IntPtr,System.IntPtr)">
+        <member name="M:Vestris.ResourceLib.GenericResource.Write(System.IO.BinaryWriter)">
             <summary>
-            Read a hardware-independent icon resource from a loaded module.
-            </summary>
-            <param name="hModule">Loaded executable module.</param>
-            <param name="lpRes">Pointer to the beginning of a hardware-independent icon resource.</param>
-            <returns>Pointer to the end of the hardware-independent icon resource.</returns>
-        </member>
-        <member name="M:Vestris.ResourceLib.DirectoryResource`1.Write(System.IO.BinaryWriter)">
-            <summary>
-            Write a hardware-independent icon resource to a binary stream.
+            Write the resource to a binary stream.
             </summary>
             <param name="w">Binary stream.</param>
-        </member>
-        <member name="P:Vestris.ResourceLib.DirectoryResource`1.ResourceType">
-            <summary>
-            Returns the type of the resource in this group.
-            </summary>
-        </member>
-        <member name="P:Vestris.ResourceLib.DirectoryResource`1.Icons">
-            <summary>
-            Icons contained in this hardware-independent icon resource.
-            </summary>
-        </member>
-        <member name="M:Vestris.ResourceLib.CursorDirectoryResource.#ctor(System.IntPtr,System.IntPtr,Vestris.ResourceLib.ResourceId,Vestris.ResourceLib.ResourceId,System.UInt16,System.Int32)">
-            <summary>
-            A hardware-independent cursor resource.
-            </summary>
-            <param name="hModule">Module handle.</param>
-            <param name="hResource">Resource ID.</param>
-            <param name="type">Resource type.</param>
-            <param name="name">Resource name.</param>
-            <param name="language">Language ID.</param>
-            <param name="size">Resource size.</param>
-        </member>
-        <member name="M:Vestris.ResourceLib.CursorDirectoryResource.#ctor">
-            <summary>
-            A new hardware-independent cursor resource.
-            </summary>
-        </member>
-        <member name="M:Vestris.ResourceLib.CursorDirectoryResource.#ctor(Vestris.ResourceLib.IconFile)">
-            <summary>
-            A new collection of cursors that can be embedded into an executable file.
-            </summary>
         </member>
         <member name="T:Vestris.ResourceLib.IconDirectoryResource">
             <summary>
@@ -1635,6 +1444,31 @@
             This structure depicts the organization of data in a .ico file.
             </summary>
         </member>
+        <member name="T:Vestris.ResourceLib.IconFile.GroupType">
+            <summary>
+            Resource type.
+            </summary>
+        </member>
+        <member name="F:Vestris.ResourceLib.IconFile.GroupType.Icon">
+            <summary>
+            Icon.
+            </summary>
+        </member>
+        <member name="F:Vestris.ResourceLib.IconFile.GroupType.Cursor">
+            <summary>
+            Cursor.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.IconFile.Type">
+            <summary>
+            Type of the group icon resource.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.IconFile.Icons">
+            <summary>
+            Collection of icons in an .ico file.
+            </summary>
+        </member>
         <member name="M:Vestris.ResourceLib.IconFile.#ctor(System.String)">
             <summary>
             An existing .ico file.
@@ -1654,54 +1488,10 @@
             <param name="lpData">Pointer to the beginning of a FILEGRPICONDIR structure.</param>
             <returns>Pointer to the end of a FILEGRPICONDIR structure.</returns>
         </member>
-        <member name="P:Vestris.ResourceLib.IconFile.Type">
-            <summary>
-            Type of the group icon resource.
-            </summary>
-        </member>
-        <member name="P:Vestris.ResourceLib.IconFile.Icons">
-            <summary>
-            Collection of icons in an .ico file.
-            </summary>
-        </member>
-        <member name="T:Vestris.ResourceLib.IconFile.GroupType">
-            <summary>
-            Resource type.
-            </summary>
-        </member>
-        <member name="F:Vestris.ResourceLib.IconFile.GroupType.Icon">
-            <summary>
-            Icon.
-            </summary>
-        </member>
-        <member name="F:Vestris.ResourceLib.IconFile.GroupType.Cursor">
-            <summary>
-            Cursor.
-            </summary>
-        </member>
         <member name="T:Vestris.ResourceLib.IconFileIcon">
             <summary>
             This structure depicts the organization of icon data in a .ico file.
             </summary>
-        </member>
-        <member name="M:Vestris.ResourceLib.IconFileIcon.#ctor">
-            <summary>
-            New icon data.
-            </summary>
-        </member>
-        <member name="M:Vestris.ResourceLib.IconFileIcon.Read(System.IntPtr,System.IntPtr)">
-            <summary>
-            Read a single icon (.ico).
-            </summary>
-            <param name="lpData">Pointer to the beginning of this icon's data.</param>
-            <param name="lpAllData">Pointer to the beginning of all icon data.</param>
-            <returns>Pointer to the end of this icon's data.</returns>
-        </member>
-        <member name="M:Vestris.ResourceLib.IconFileIcon.ToString">
-            <summary>
-            Icon size as a string.
-            </summary>
-            <returns>Icon size in the width x height format.</returns>
         </member>
         <member name="P:Vestris.ResourceLib.IconFileIcon.Header">
             <summary>
@@ -1711,6 +1501,11 @@
         <member name="P:Vestris.ResourceLib.IconFileIcon.Image">
             <summary>
             Icon bitmap.
+            </summary>
+        </member>
+        <member name="M:Vestris.ResourceLib.IconFileIcon.#ctor">
+            <summary>
+            New icon data.
             </summary>
         </member>
         <member name="P:Vestris.ResourceLib.IconFileIcon.Width">
@@ -1728,89 +1523,132 @@
             Image size in bytes.
             </summary>
         </member>
-        <member name="T:Vestris.ResourceLib.DeviceIndependentBitmap">
+        <member name="M:Vestris.ResourceLib.IconFileIcon.Read(System.IntPtr,System.IntPtr)">
             <summary>
-            A device-independent image consists of a BITMAPINFOHEADER where
-            bmWidth is the width of the image andbmHeight is double the height 
-            of the image, followed by the bitmap color table, followed by the image
-            pixels, followed by the mask pixels.
+            Read a single icon (.ico).
+            </summary>
+            <param name="lpData">Pointer to the beginning of this icon's data.</param>
+            <param name="lpAllData">Pointer to the beginning of all icon data.</param>
+            <returns>Pointer to the end of this icon's data.</returns>
+        </member>
+        <member name="M:Vestris.ResourceLib.IconFileIcon.ToString">
+            <summary>
+            Icon size as a string.
+            </summary>
+            <returns>Icon size in the width x height format.</returns>
+        </member>
+        <member name="T:Vestris.ResourceLib.IconImageResource">
+            <summary>
+            This structure depicts the organization of data in an icon resource.
             </summary>
         </member>
-        <member name="M:Vestris.ResourceLib.DeviceIndependentBitmap.#ctor">
+        <member name="F:Vestris.ResourceLib.IconImageResource._header">
             <summary>
-            A new icon image.
+            Directory header.
             </summary>
         </member>
-        <member name="M:Vestris.ResourceLib.DeviceIndependentBitmap.#ctor(System.Byte[])">
+        <member name="F:Vestris.ResourceLib.IconImageResource._image">
             <summary>
-            A device-independent bitmap.
-            </summary>
-            <param name="data">Bitmap data.</param>
-        </member>
-        <member name="M:Vestris.ResourceLib.DeviceIndependentBitmap.#ctor(Vestris.ResourceLib.DeviceIndependentBitmap)">
-            <summary>
-            Create a copy of an image.
-            </summary>
-            <param name="image">Source image.</param>
-        </member>
-        <member name="M:Vestris.ResourceLib.DeviceIndependentBitmap.Read(System.IntPtr,System.UInt32)">
-            <summary>
-            Read icon data.
-            </summary>
-            <param name="lpData">Pointer to the beginning of icon data.</param>
-            <param name="size">Icon data size.</param>
-        </member>
-        <member name="M:Vestris.ResourceLib.DeviceIndependentBitmap.GetDIBRowWidth(System.Int32)">
-            <summary>
-            Returns the width of a row in a DIB Bitmap given the number of bits. DIB Bitmap rows always align on a DWORD boundary.
-            </summary>
-            <param name="width">Number of bits.</param>
-            <returns>Width of a row in bytes.</returns>
-        </member>
-        <member name="P:Vestris.ResourceLib.DeviceIndependentBitmap.Data">
-            <summary>
-            Raw image data.
+            Actual image.
             </summary>
         </member>
-        <member name="P:Vestris.ResourceLib.DeviceIndependentBitmap.Header">
+        <member name="P:Vestris.ResourceLib.IconImageResource.Header">
             <summary>
-            Bitmap info header.
+            Hardware-independent icon directory header.
             </summary>
         </member>
-        <member name="P:Vestris.ResourceLib.DeviceIndependentBitmap.Size">
+        <member name="P:Vestris.ResourceLib.IconImageResource.Id">
             <summary>
-            Bitmap size in bytes.
+            Embedded icon Id.
             </summary>
         </member>
-        <member name="P:Vestris.ResourceLib.DeviceIndependentBitmap.MaskImageSize">
+        <member name="P:Vestris.ResourceLib.IconImageResource.Image">
             <summary>
-            Size of the image mask.
+            An icon image.
             </summary>
         </member>
-        <member name="P:Vestris.ResourceLib.DeviceIndependentBitmap.XorImageIndex">
+        <member name="M:Vestris.ResourceLib.IconImageResource.#ctor(System.IntPtr,System.IntPtr,Vestris.ResourceLib.ResourceId,Vestris.ResourceLib.ResourceId,System.UInt16,System.Int32)">
             <summary>
-            Position of the DIB bitmap bits within a DIB bitmap array.
+            An existing icon resource.
+            </summary>
+            <param name="hModule">Module handle.</param>
+            <param name="hResource">Resource ID.</param>
+            <param name="type">Resource type.</param>
+            <param name="name">Resource name.</param>
+            <param name="language">Language ID.</param>
+            <param name="size">Resource size.</param>
+        </member>
+        <member name="M:Vestris.ResourceLib.IconImageResource.#ctor(Vestris.ResourceLib.ResourceId)">
+            <summary>
+            A new icon resource.
             </summary>
         </member>
-        <member name="P:Vestris.ResourceLib.DeviceIndependentBitmap.ColorCount">
+        <member name="M:Vestris.ResourceLib.IconImageResource.#ctor(Vestris.ResourceLib.IconFileIcon,Vestris.ResourceLib.ResourceId,Vestris.ResourceLib.ResourceId,System.UInt16)">
             <summary>
-            Number of colors in the palette.
+            Create a new icon image resource from a file icon.
+            </summary>
+            <param name="icon">File icon.</param>
+            <param name="type">Resource type.</param>
+            <param name="name">Resource id.</param>
+            <param name="language">Resource language.</param>
+        </member>
+        <member name="P:Vestris.ResourceLib.IconImageResource.Width">
+            <summary>
+            Icon width in pixels.
             </summary>
         </member>
-        <member name="P:Vestris.ResourceLib.DeviceIndependentBitmap.Mask">
+        <member name="P:Vestris.ResourceLib.IconImageResource.Height">
             <summary>
-            Bitmap monochrome mask.
+            Icon height in pixels.
             </summary>
         </member>
-        <member name="P:Vestris.ResourceLib.DeviceIndependentBitmap.Color">
+        <member name="P:Vestris.ResourceLib.IconImageResource.ImageSize">
             <summary>
-            Bitmap color (XOR) part of the image.
+            Image size in bytes.
             </summary>
         </member>
-        <member name="P:Vestris.ResourceLib.DeviceIndependentBitmap.Image">
+        <member name="M:Vestris.ResourceLib.IconImageResource.Read(System.IntPtr,System.IntPtr)">
             <summary>
-            Complete image.
+            Read an icon resource from a previously loaded module.
             </summary>
+            <param name="hModule">Module handle.</param>
+            <param name="lpRes">Pointer to a directory entry in the hardware-independent icon resource.</param>
+            <returns>Pointer to the end of the icon resource.</returns>
+        </member>
+        <member name="M:Vestris.ResourceLib.IconImageResource.ReadImage(System.IntPtr,System.UInt32)">
+            <summary>
+            Read the bitmap image.
+            </summary>
+            <param name="dibBits">DIB bits.</param>
+            <param name="size">Size of image.</param>
+        </member>
+        <member name="P:Vestris.ResourceLib.IconImageResource.PixelFormat">
+            <summary>
+            Icon pixel format.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.IconImageResource.PixelFormatString">
+            <summary>
+            Icon pixel format English standard string.
+            </summary>
+        </member>
+        <member name="M:Vestris.ResourceLib.IconImageResource.ToString">
+            <summary>
+            String representation of the icon.
+            </summary>
+            <returns>A string in a format of width x height followed by the pixel format.</returns>
+        </member>
+        <member name="M:Vestris.ResourceLib.IconImageResource.Write(System.IO.BinaryWriter)">
+            <summary>
+            Write icon resource data to a binary stream.
+            </summary>
+            <param name="w">Binary stream.</param>
+        </member>
+        <member name="M:Vestris.ResourceLib.IconImageResource.SaveIconTo(System.String)">
+            <summary>
+            Save icon to a file.
+            </summary>
+            <param name="filename">Target executable file.</param>
         </member>
         <member name="T:Vestris.ResourceLib.IconResource">
             <summary>
@@ -1846,190 +1684,6 @@
             <summary>
             Kernel32.dll interop functions.
             </summary>
-        </member>
-        <member name="F:Vestris.ResourceLib.Kernel32.LOAD_LIBRARY_AS_DATAFILE">
-            <summary>
-            If this value is used, the system maps the file into the calling process's virtual address space as if it were a data file.
-            </summary>
-        </member>
-        <member name="F:Vestris.ResourceLib.Kernel32.DONT_RESOLVE_DLL_REFERENCES">
-            <summary>
-            If this value is used, and the executable module is a DLL, the system does not call DllMain for process and thread initialization and termination.
-            </summary>
-        </member>
-        <member name="F:Vestris.ResourceLib.Kernel32.LOAD_WITH_ALTERED_SEARCH_PATH">
-            <summary>
-            If this value is used and lpFileName specifies an absolute path, the system uses the alternate file search strategy.
-            </summary>
-        </member>
-        <member name="F:Vestris.ResourceLib.Kernel32.LOAD_IGNORE_CODE_AUTHZ_LEVEL">
-            <summary>
-            If this value is used, the system does not perform automatic trust comparisons on the DLL or its dependents when they are loaded.
-            </summary>
-        </member>
-        <member name="F:Vestris.ResourceLib.Kernel32.LANG_NEUTRAL">
-            <summary>
-            Neutral primary language ID.
-            </summary>
-        </member>
-        <member name="F:Vestris.ResourceLib.Kernel32.LANG_ENGLISH">
-            <summary>
-            US-English primary language ID.
-            </summary>
-        </member>
-        <member name="F:Vestris.ResourceLib.Kernel32.SUBLANG_NEUTRAL">
-            <summary>
-            Neutral sublanguage ID.
-            </summary>
-        </member>
-        <member name="F:Vestris.ResourceLib.Kernel32.SUBLANG_ENGLISH_US">
-            <summary>
-            US-English sublanguage ID.
-            </summary>
-        </member>
-        <member name="F:Vestris.ResourceLib.Kernel32.CREATEPROCESS_MANIFEST_RESOURCE_ID">
-            <summary>
-            CREATEPROCESS_MANIFEST_RESOURCE_ID is used primarily for EXEs. If an executable has a resource of type RT_MANIFEST, 
-            ID CREATEPROCESS_MANIFEST_RESOURCE_ID, Windows will create a process default activation context for the process. 
-            The process default activation context will be used by all components running in the process. 
-            CREATEPROCESS_MANIFEST_RESOURCE_ID can also used by DLLs. When Windows probe for dependencies, if the dll has 
-            a resource of type RT_MANIFEST, ID CREATEPROCESS_MANIFEST_RESOURCE_ID, Windows will use that manifest as the 
-            dependency. 
-            </summary>
-        </member>
-        <member name="F:Vestris.ResourceLib.Kernel32.ISOLATIONAWARE_MANIFEST_RESOURCE_ID">
-            <summary>
-            ISOLATIONAWARE_MANIFEST_RESOURCE_ID is used primarily for DLLs. It should be used if the dll wants private 
-            dependencies other than the process default. For example, if an dll depends on comctl32.dll version 6.0.0.0. 
-            It should have a resource of type RT_MANIFEST, ID ISOLATIONAWARE_MANIFEST_RESOURCE_ID to depend on comctl32.dll 
-            version 6.0.0.0, so that even if the process executable wants comctl32.dll version 5.1, the dll itself will still 
-            use the right version of comctl32.dll. 
-            </summary>
-        </member>
-        <member name="F:Vestris.ResourceLib.Kernel32.ISOLATIONAWARE_NOSTATICIMPORT_MANIFEST_RESOURCE_ID">
-            <summary>
-            When ISOLATION_AWARE_ENABLED is defined, Windows re-defines certain APIs. For example LoadLibraryExW 
-            is redefined to IsolationAwareLoadLibraryExW. 
-            </summary>
-        </member>
-        <member name="M:Vestris.ResourceLib.Kernel32.LoadLibraryEx(System.String,System.IntPtr,System.UInt32)">
-            <summary>
-            Loads the specified module into the address space of the calling process. 
-            The specified module may cause other modules to be loaded.
-            </summary>
-            <param name="lpFileName">The name of the module.</param>
-            <param name="hFile">This parameter is reserved for future use.</param>
-            <param name="dwFlags">The action to be taken when loading the module.</param>
-            <returns></returns>
-        </member>
-        <member name="M:Vestris.ResourceLib.Kernel32.FreeLibrary(System.IntPtr)">
-            <summary>
-            Frees the loaded dynamic-link library (DLL) module and, if necessary, decrements its reference count.
-            </summary>
-            <param name="hModule">A handle to the loaded library module.</param>
-            <returns>If the function succeeds, the return value is nonzero.</returns>
-        </member>
-        <member name="M:Vestris.ResourceLib.Kernel32.EnumResourceTypes(System.IntPtr,Vestris.ResourceLib.Kernel32.EnumResourceTypesDelegate,System.IntPtr)">
-            <summary>
-            Enumerates resource types within a binary module.
-            </summary>
-            <param name="hModule">Handle to a module to search.</param>
-            <param name="lpEnumFunc">Pointer to the callback function to be called for each enumerated resource type.</param>
-            <param name="lParam">Specifies an application-defined value passed to the callback function.</param>
-            <returns>Returns TRUE if successful; otherwise, FALSE.</returns>
-        </member>
-        <member name="M:Vestris.ResourceLib.Kernel32.EnumResourceNames(System.IntPtr,System.IntPtr,Vestris.ResourceLib.Kernel32.EnumResourceNamesDelegate,System.IntPtr)">
-            <summary>
-            Enumerates resources of a specified type within a binary module. 
-            </summary>
-            <param name="hModule">Handle to a module to search.</param>
-            <param name="lpszType">Pointer to a null-terminated string specifying the type of the resource for which the name is being enumerated.</param>
-            <param name="lpEnumFunc">Pointer to the callback function to be called for each enumerated resource name or ID.</param>
-            <param name="lParam">Specifies an application-defined value passed to the callback function.</param>
-            <returns>Returns TRUE if the function succeeds or FALSE if the function does not find a resource of the type specified, or if the function fails for another reason.</returns>
-        </member>
-        <member name="M:Vestris.ResourceLib.Kernel32.EnumResourceLanguages(System.IntPtr,System.IntPtr,System.IntPtr,Vestris.ResourceLib.Kernel32.EnumResourceLanguagesDelegate,System.IntPtr)">
-            <summary>
-            Enumerates language-specific resources, of the specified type and name, associated with a binary module.
-            </summary>
-            <param name="hModule">The handle to a module to search.</param>
-            <param name="lpszType">Pointer to a null-terminated string specifying the type of resource for which the language is being enumerated.</param>
-            <param name="lpszName">Pointer to a null-terminated string specifying the name of the resource for which the language is being enumerated.</param>
-            <param name="lpEnumFunc">Pointer to the callback function to be called for each enumerated resource language.</param>
-            <param name="lParam">Specifies an application-defined value passed to the callback function.</param>
-            <returns>Returns TRUE if successful or FALSE otherwise.</returns>
-        </member>
-        <member name="M:Vestris.ResourceLib.Kernel32.FindResourceEx(System.IntPtr,System.IntPtr,System.IntPtr,System.UInt16)">
-            <summary>
-            Determines the location of the resource with the specified type, name, and language in the specified module.
-            </summary>
-            <param name="hModule">Handle to the module whose executable file contains the resource.</param>
-            <param name="lpszType">Pointer to a null-terminated string specifying the type name of the resource.</param>
-            <param name="lpszName">Pointer to a null-terminated string specifying the name of the resource.</param>
-            <param name="wLanguage">Specifies the language of the resource.</param>
-            <returns>If the function succeeds, the return value is a handle to the specified resource's information block.</returns>
-        </member>
-        <member name="M:Vestris.ResourceLib.Kernel32.LockResource(System.IntPtr)">
-            <summary>
-            Locks the specified resource in memory.
-            </summary>
-            <param name="hResData">Handle to the resource to be locked.</param>
-            <returns>If the loaded resource is locked, the return value is a pointer to the first byte of the resource; otherwise, it is NULL.</returns>
-        </member>
-        <member name="M:Vestris.ResourceLib.Kernel32.LoadResource(System.IntPtr,System.IntPtr)">
-            <summary>
-            Loads the specified resource into global memory.
-            </summary>
-            <param name="hModule">Handle to the module whose executable file contains the resource.</param>
-            <param name="hResData">Handle to the resource to be loaded.</param>
-            <returns>If the function succeeds, the return value is a handle to the data associated with the resource.</returns>
-        </member>
-        <member name="M:Vestris.ResourceLib.Kernel32.SizeofResource(System.IntPtr,System.IntPtr)">
-            <summary>
-            Returns the size, in bytes, of the specified resource. 
-            </summary>
-            <param name="hInstance">Handle to the module whose executable file contains the resource.</param>
-            <param name="hResInfo">Handle to the resource. This handle must be created by using the FindResource or FindResourceEx function.</param>
-            <returns>If the function succeeds, the return value is the number of bytes in the resource.</returns>
-        </member>
-        <member name="M:Vestris.ResourceLib.Kernel32.CloseHandle(System.IntPtr)">
-            <summary>
-            Closes an open object handle.
-            </summary>
-            <param name="hHandle">A valid handle to an open object.</param>
-            <returns>If the function succeeds, the return value is nonzero.</returns>
-        </member>
-        <member name="M:Vestris.ResourceLib.Kernel32.BeginUpdateResource(System.String,System.Boolean)">
-            <summary>
-            Returns a handle to either a language-neutral portable executable file (LN file) or a 
-            language-specific resource file (.mui file) that can be used by the UpdateResource function 
-            to add, delete, or replace resources in a binary module.
-            </summary>
-            <param name="pFileName">Pointer to a null-terminated string that specifies the binary file in which to update resources.</param>
-            <param name="bDeleteExistingResources">Specifies whether to delete the pFileName parameter's existing resources.</param>
-            <returns>If the function succeeds, the return value is a handle that can be used by the UpdateResource and EndUpdateResource functions.</returns>
-        </member>
-        <member name="M:Vestris.ResourceLib.Kernel32.UpdateResource(System.IntPtr,System.IntPtr,System.IntPtr,System.UInt16,System.Byte[],System.UInt32)">
-            <summary>
-            Adds, deletes, or replaces a resource in a portable executable (PE) file. 
-            There are some restrictions on resource updates in files that contain Resource Configuration (RC Config) data: 
-            language-neutral (LN) files and language-specific resource (.mui) files.
-            </summary>
-            <param name="hUpdate">A module handle returned by the BeginUpdateResource function, referencing the file to be updated.</param>
-            <param name="lpType">Pointer to a null-terminated string specifying the resource type to be updated.</param>
-            <param name="lpName">Pointer to a null-terminated string specifying the name of the resource to be updated.</param>
-            <param name="wLanguage">Specifies the language identifier of the resource to be updated.</param>
-            <param name="lpData">Pointer to the resource data to be inserted into the file indicated by hUpdate.</param>
-            <param name="cbData">Specifies the size, in bytes, of the resource data at lpData.</param>
-            <returns>Returns TRUE if successful or FALSE otherwise.</returns>
-        </member>
-        <member name="M:Vestris.ResourceLib.Kernel32.EndUpdateResource(System.IntPtr,System.Boolean)">
-            <summary>
-            Commits or discards changes made prior to a call to UpdateResource.
-            </summary>
-            <param name="hUpdate">A module handle returned by the BeginUpdateResource function, and used by UpdateResource, referencing the file to be updated.</param>
-            <param name="fDiscard">Specifies whether to write the resource updates to the file. If this parameter is TRUE, no changes are made. If it is FALSE, the changes are made: the resource updates will take effect.</param>
-            <returns>Returns TRUE if the function succeeds; FALSE otherwise.</returns>
         </member>
         <member name="T:Vestris.ResourceLib.Kernel32.RESOURCE_HEADER">
             <summary>
@@ -2307,6 +1961,43 @@
             Number of images.
             </summary>
         </member>
+        <member name="F:Vestris.ResourceLib.Kernel32.LOAD_LIBRARY_AS_DATAFILE">
+            <summary>
+            If this value is used, the system maps the file into the calling process's virtual address space as if it were a data file.
+            </summary>
+        </member>
+        <member name="F:Vestris.ResourceLib.Kernel32.DONT_RESOLVE_DLL_REFERENCES">
+            <summary>
+            If this value is used, and the executable module is a DLL, the system does not call DllMain for process and thread initialization and termination.
+            </summary>
+        </member>
+        <member name="F:Vestris.ResourceLib.Kernel32.LOAD_WITH_ALTERED_SEARCH_PATH">
+            <summary>
+            If this value is used and lpFileName specifies an absolute path, the system uses the alternate file search strategy.
+            </summary>
+        </member>
+        <member name="F:Vestris.ResourceLib.Kernel32.LOAD_IGNORE_CODE_AUTHZ_LEVEL">
+            <summary>
+            If this value is used, the system does not perform automatic trust comparisons on the DLL or its dependents when they are loaded.
+            </summary>
+        </member>
+        <member name="M:Vestris.ResourceLib.Kernel32.LoadLibraryEx(System.String,System.IntPtr,System.UInt32)">
+            <summary>
+            Loads the specified module into the address space of the calling process. 
+            The specified module may cause other modules to be loaded.
+            </summary>
+            <param name="lpFileName">The name of the module.</param>
+            <param name="hFile">This parameter is reserved for future use.</param>
+            <param name="dwFlags">The action to be taken when loading the module.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Vestris.ResourceLib.Kernel32.FreeLibrary(System.IntPtr)">
+            <summary>
+            Frees the loaded dynamic-link library (DLL) module and, if necessary, decrements its reference count.
+            </summary>
+            <param name="hModule">A handle to the loaded library module.</param>
+            <returns>If the function succeeds, the return value is nonzero.</returns>
+        </member>
         <member name="T:Vestris.ResourceLib.Kernel32.ResourceTypes">
             <summary>
             Predefined resource types.
@@ -2417,6 +2108,15 @@
             Microsoft Windows XP: Side-by-Side Assembly XML Manifest.
             </summary>
         </member>
+        <member name="M:Vestris.ResourceLib.Kernel32.EnumResourceTypes(System.IntPtr,Vestris.ResourceLib.Kernel32.EnumResourceTypesDelegate,System.IntPtr)">
+            <summary>
+            Enumerates resource types within a binary module.
+            </summary>
+            <param name="hModule">Handle to a module to search.</param>
+            <param name="lpEnumFunc">Pointer to the callback function to be called for each enumerated resource type.</param>
+            <param name="lParam">Specifies an application-defined value passed to the callback function.</param>
+            <returns>Returns TRUE if successful; otherwise, FALSE.</returns>
+        </member>
         <member name="T:Vestris.ResourceLib.Kernel32.EnumResourceTypesDelegate">
             <summary>
             An application-defined callback function used with the EnumResourceTypes and EnumResourceTypesEx functions.
@@ -2425,6 +2125,16 @@
             <param name="lpszType">Pointer to a null-terminated string specifying the type name of the resource for which the type is being enumerated.</param>
             <param name="lParam">Specifies the application-defined parameter passed to the EnumResourceTypes or EnumResourceTypesEx function. </param>
             <returns>Returns TRUE if successful; otherwise, FALSE.</returns>
+        </member>
+        <member name="M:Vestris.ResourceLib.Kernel32.EnumResourceNames(System.IntPtr,System.IntPtr,Vestris.ResourceLib.Kernel32.EnumResourceNamesDelegate,System.IntPtr)">
+            <summary>
+            Enumerates resources of a specified type within a binary module. 
+            </summary>
+            <param name="hModule">Handle to a module to search.</param>
+            <param name="lpszType">Pointer to a null-terminated string specifying the type of the resource for which the name is being enumerated.</param>
+            <param name="lpEnumFunc">Pointer to the callback function to be called for each enumerated resource name or ID.</param>
+            <param name="lParam">Specifies an application-defined value passed to the callback function.</param>
+            <returns>Returns TRUE if the function succeeds or FALSE if the function does not find a resource of the type specified, or if the function fails for another reason.</returns>
         </member>
         <member name="T:Vestris.ResourceLib.Kernel32.EnumResourceNamesDelegate">
             <summary>
@@ -2436,6 +2146,17 @@
             <param name="lParam">Specifies the application-defined parameter passed to the EnumResourceNames or EnumResourceNamesEx function.</param>
             <returns>Returns TRUE if the function succeeds or FALSE if the function does not find a resource of the type specified, or if the function fails for another reason.</returns>
         </member>
+        <member name="M:Vestris.ResourceLib.Kernel32.EnumResourceLanguages(System.IntPtr,System.IntPtr,System.IntPtr,Vestris.ResourceLib.Kernel32.EnumResourceLanguagesDelegate,System.IntPtr)">
+            <summary>
+            Enumerates language-specific resources, of the specified type and name, associated with a binary module.
+            </summary>
+            <param name="hModule">The handle to a module to search.</param>
+            <param name="lpszType">Pointer to a null-terminated string specifying the type of resource for which the language is being enumerated.</param>
+            <param name="lpszName">Pointer to a null-terminated string specifying the name of the resource for which the language is being enumerated.</param>
+            <param name="lpEnumFunc">Pointer to the callback function to be called for each enumerated resource language.</param>
+            <param name="lParam">Specifies an application-defined value passed to the callback function.</param>
+            <returns>Returns TRUE if successful or FALSE otherwise.</returns>
+        </member>
         <member name="T:Vestris.ResourceLib.Kernel32.EnumResourceLanguagesDelegate">
             <summary>
             An application-defined callback function used with the EnumResourceLanguages and EnumResourceLanguagesEx functions.
@@ -2446,6 +2167,123 @@
             <param name="wIDLanguage">Specifies the language identifier for the resource for which the language is being enumerated.</param>
             <param name="lParam">Specifies the application-defined parameter passed to the EnumResourceLanguages or EnumResourceLanguagesEx function.</param>
             <returns>Returns TRUE if successful or FALSE otherwise.</returns>
+        </member>
+        <member name="M:Vestris.ResourceLib.Kernel32.FindResourceEx(System.IntPtr,System.IntPtr,System.IntPtr,System.UInt16)">
+            <summary>
+            Determines the location of the resource with the specified type, name, and language in the specified module.
+            </summary>
+            <param name="hModule">Handle to the module whose executable file contains the resource.</param>
+            <param name="lpszType">Pointer to a null-terminated string specifying the type name of the resource.</param>
+            <param name="lpszName">Pointer to a null-terminated string specifying the name of the resource.</param>
+            <param name="wLanguage">Specifies the language of the resource.</param>
+            <returns>If the function succeeds, the return value is a handle to the specified resource's information block.</returns>
+        </member>
+        <member name="M:Vestris.ResourceLib.Kernel32.LockResource(System.IntPtr)">
+            <summary>
+            Locks the specified resource in memory.
+            </summary>
+            <param name="hResData">Handle to the resource to be locked.</param>
+            <returns>If the loaded resource is locked, the return value is a pointer to the first byte of the resource; otherwise, it is NULL.</returns>
+        </member>
+        <member name="M:Vestris.ResourceLib.Kernel32.LoadResource(System.IntPtr,System.IntPtr)">
+            <summary>
+            Loads the specified resource into global memory.
+            </summary>
+            <param name="hModule">Handle to the module whose executable file contains the resource.</param>
+            <param name="hResData">Handle to the resource to be loaded.</param>
+            <returns>If the function succeeds, the return value is a handle to the data associated with the resource.</returns>
+        </member>
+        <member name="M:Vestris.ResourceLib.Kernel32.SizeofResource(System.IntPtr,System.IntPtr)">
+            <summary>
+            Returns the size, in bytes, of the specified resource. 
+            </summary>
+            <param name="hInstance">Handle to the module whose executable file contains the resource.</param>
+            <param name="hResInfo">Handle to the resource. This handle must be created by using the FindResource or FindResourceEx function.</param>
+            <returns>If the function succeeds, the return value is the number of bytes in the resource.</returns>
+        </member>
+        <member name="M:Vestris.ResourceLib.Kernel32.CloseHandle(System.IntPtr)">
+            <summary>
+            Closes an open object handle.
+            </summary>
+            <param name="hHandle">A valid handle to an open object.</param>
+            <returns>If the function succeeds, the return value is nonzero.</returns>
+        </member>
+        <member name="M:Vestris.ResourceLib.Kernel32.BeginUpdateResource(System.String,System.Boolean)">
+            <summary>
+            Returns a handle to either a language-neutral portable executable file (LN file) or a 
+            language-specific resource file (.mui file) that can be used by the UpdateResource function 
+            to add, delete, or replace resources in a binary module.
+            </summary>
+            <param name="pFileName">Pointer to a null-terminated string that specifies the binary file in which to update resources.</param>
+            <param name="bDeleteExistingResources">Specifies whether to delete the pFileName parameter's existing resources.</param>
+            <returns>If the function succeeds, the return value is a handle that can be used by the UpdateResource and EndUpdateResource functions.</returns>
+        </member>
+        <member name="M:Vestris.ResourceLib.Kernel32.UpdateResource(System.IntPtr,System.IntPtr,System.IntPtr,System.UInt16,System.Byte[],System.UInt32)">
+            <summary>
+            Adds, deletes, or replaces a resource in a portable executable (PE) file. 
+            There are some restrictions on resource updates in files that contain Resource Configuration (RC Config) data: 
+            language-neutral (LN) files and language-specific resource (.mui) files.
+            </summary>
+            <param name="hUpdate">A module handle returned by the BeginUpdateResource function, referencing the file to be updated.</param>
+            <param name="lpType">Pointer to a null-terminated string specifying the resource type to be updated.</param>
+            <param name="lpName">Pointer to a null-terminated string specifying the name of the resource to be updated.</param>
+            <param name="wLanguage">Specifies the language identifier of the resource to be updated.</param>
+            <param name="lpData">Pointer to the resource data to be inserted into the file indicated by hUpdate.</param>
+            <param name="cbData">Specifies the size, in bytes, of the resource data at lpData.</param>
+            <returns>Returns TRUE if successful or FALSE otherwise.</returns>
+        </member>
+        <member name="M:Vestris.ResourceLib.Kernel32.EndUpdateResource(System.IntPtr,System.Boolean)">
+            <summary>
+            Commits or discards changes made prior to a call to UpdateResource.
+            </summary>
+            <param name="hUpdate">A module handle returned by the BeginUpdateResource function, and used by UpdateResource, referencing the file to be updated.</param>
+            <param name="fDiscard">Specifies whether to write the resource updates to the file. If this parameter is TRUE, no changes are made. If it is FALSE, the changes are made: the resource updates will take effect.</param>
+            <returns>Returns TRUE if the function succeeds; FALSE otherwise.</returns>
+        </member>
+        <member name="F:Vestris.ResourceLib.Kernel32.LANG_NEUTRAL">
+            <summary>
+            Neutral primary language ID.
+            </summary>
+        </member>
+        <member name="F:Vestris.ResourceLib.Kernel32.LANG_ENGLISH">
+            <summary>
+            US-English primary language ID.
+            </summary>
+        </member>
+        <member name="F:Vestris.ResourceLib.Kernel32.SUBLANG_NEUTRAL">
+            <summary>
+            Neutral sublanguage ID.
+            </summary>
+        </member>
+        <member name="F:Vestris.ResourceLib.Kernel32.SUBLANG_ENGLISH_US">
+            <summary>
+            US-English sublanguage ID.
+            </summary>
+        </member>
+        <member name="F:Vestris.ResourceLib.Kernel32.CREATEPROCESS_MANIFEST_RESOURCE_ID">
+            <summary>
+            CREATEPROCESS_MANIFEST_RESOURCE_ID is used primarily for EXEs. If an executable has a resource of type RT_MANIFEST, 
+            ID CREATEPROCESS_MANIFEST_RESOURCE_ID, Windows will create a process default activation context for the process. 
+            The process default activation context will be used by all components running in the process. 
+            CREATEPROCESS_MANIFEST_RESOURCE_ID can also used by DLLs. When Windows probe for dependencies, if the dll has 
+            a resource of type RT_MANIFEST, ID CREATEPROCESS_MANIFEST_RESOURCE_ID, Windows will use that manifest as the 
+            dependency. 
+            </summary>
+        </member>
+        <member name="F:Vestris.ResourceLib.Kernel32.ISOLATIONAWARE_MANIFEST_RESOURCE_ID">
+            <summary>
+            ISOLATIONAWARE_MANIFEST_RESOURCE_ID is used primarily for DLLs. It should be used if the dll wants private 
+            dependencies other than the process default. For example, if an dll depends on comctl32.dll version 6.0.0.0. 
+            It should have a resource of type RT_MANIFEST, ID ISOLATIONAWARE_MANIFEST_RESOURCE_ID to depend on comctl32.dll 
+            version 6.0.0.0, so that even if the process executable wants comctl32.dll version 5.1, the dll itself will still 
+            use the right version of comctl32.dll. 
+            </summary>
+        </member>
+        <member name="F:Vestris.ResourceLib.Kernel32.ISOLATIONAWARE_NOSTATICIMPORT_MANIFEST_RESOURCE_ID">
+            <summary>
+            When ISOLATION_AWARE_ENABLED is defined, Windows re-defines certain APIs. For example LoadLibraryExW 
+            is redefined to IsolationAwareLoadLibraryExW. 
+            </summary>
         </member>
         <member name="T:Vestris.ResourceLib.Kernel32.ManifestType">
             <summary>
@@ -2467,9 +2305,22 @@
             ISOLATIONAWARE_NOSTATICIMPORT_MANIFEST_RESOURCE_ID
             </summary>
         </member>
+        <member name="M:Vestris.ResourceLib.Kernel32.MoveMemory(System.IntPtr,System.IntPtr,System.UInt32)">
+            <summary>
+            Copies the contents of a source memory block to a destination memory block, and supports overlapping source and destination memory blocks.
+            </summary>
+            <param name="dest">A pointer to the starting address of the copied block's destination.</param>
+            <param name="src">A pointer to the starting address of the block of memory to copy.</param>
+            <param name="count">The size of the block of memory to copy, in bytes.</param>
+        </member>
         <member name="T:Vestris.ResourceLib.LoadException">
             <summary>
             A resource load exception.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.LoadException.OuterException">
+            <summary>
+            The Win32 exception from a resource enumeration function.
             </summary>
         </member>
         <member name="M:Vestris.ResourceLib.LoadException.#ctor(System.String,System.Exception,System.Exception)">
@@ -2480,11 +2331,6 @@
             <param name="innerException">The inner exception thrown within a single resource.</param>
             <param name="outerException">The outer exception from the Win32 API.</param>
         </member>
-        <member name="P:Vestris.ResourceLib.LoadException.OuterException">
-            <summary>
-            The Win32 exception from a resource enumeration function.
-            </summary>
-        </member>
         <member name="P:Vestris.ResourceLib.LoadException.Message">
             <summary>
             A combined message of the inner and outer exception.
@@ -2493,6 +2339,16 @@
         <member name="T:Vestris.ResourceLib.ManifestResource">
             <summary>
             An embedded SxS manifest.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.ManifestResource.Manifest">
+            <summary>
+            Embedded XML manifest.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.ManifestResource.ManifestType">
+            <summary>
+            Manifest type.
             </summary>
         </member>
         <member name="M:Vestris.ResourceLib.ManifestResource.#ctor(System.IntPtr,System.IntPtr,Vestris.ResourceLib.ResourceId,Vestris.ResourceLib.ResourceId,System.UInt16,System.Int32)">
@@ -2538,20 +2394,33 @@
             <param name="filename">Name of an executable file (.exe or .dll).</param>
             <param name="manifestType">Manifest resource type.</param>
         </member>
-        <member name="P:Vestris.ResourceLib.ManifestResource.Manifest">
+        <member name="T:Vestris.ResourceLib.MenuExTemplate">
             <summary>
-            Embedded XML manifest.
+            Extended menu template.
             </summary>
         </member>
-        <member name="P:Vestris.ResourceLib.ManifestResource.ManifestType">
+        <member name="P:Vestris.ResourceLib.MenuExTemplate.MenuItems">
             <summary>
-            Manifest type.
+            Menu items.
             </summary>
         </member>
-        <member name="T:Vestris.ResourceLib.MenuExTemplateItemCommand">
+        <member name="M:Vestris.ResourceLib.MenuExTemplate.Read(System.IntPtr)">
             <summary>
-            A command menu item.
+            Read the menu template.
             </summary>
+            <param name="lpRes">Address in memory.</param>
+        </member>
+        <member name="M:Vestris.ResourceLib.MenuExTemplate.Write(System.IO.BinaryWriter)">
+            <summary>
+            Write the menu template.
+            </summary>
+            <param name="w">Binary stream.</param>
+        </member>
+        <member name="M:Vestris.ResourceLib.MenuExTemplate.ToString">
+            <summary>
+            String representation of the menu in the MENUEX format.
+            </summary>
+            <returns>String representation of the menu.</returns>
         </member>
         <member name="T:Vestris.ResourceLib.MenuExTemplateItem">
             <summary>
@@ -2566,6 +2435,11 @@
         <member name="F:Vestris.ResourceLib.MenuExTemplateItem._menuString">
             <summary>
             Menu string.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.MenuExTemplateItem.MenuString">
+            <summary>
+            Menu text.
             </summary>
         </member>
         <member name="M:Vestris.ResourceLib.MenuExTemplateItem.Read(System.IntPtr)">
@@ -2594,14 +2468,55 @@
             </summary>
             <returns>String representation.</returns>
         </member>
-        <member name="P:Vestris.ResourceLib.MenuExTemplateItem.MenuString">
+        <member name="T:Vestris.ResourceLib.MenuExTemplateItemCollection">
             <summary>
-            Menu text.
+            A collection of menu items.
+            </summary>
+        </member>
+        <member name="M:Vestris.ResourceLib.MenuExTemplateItemCollection.#ctor">
+            <summary>
+            A collection of extended menu items.
+            </summary>
+        </member>
+        <member name="M:Vestris.ResourceLib.MenuExTemplateItemCollection.Read(System.IntPtr)">
+            <summary>
+            Read the menu item collection.
+            </summary>
+            <param name="lpRes">Address in memory.</param>
+            <returns>End of the menu item structure.</returns>
+        </member>
+        <member name="M:Vestris.ResourceLib.MenuExTemplateItemCollection.Write(System.IO.BinaryWriter)">
+            <summary>
+            Write the menu collection to a binary stream.
+            </summary>
+            <param name="w">Binary stream.</param>
+        </member>
+        <member name="M:Vestris.ResourceLib.MenuExTemplateItemCollection.ToString">
+            <summary>
+            String representation in the MENU format.
+            </summary>
+            <returns>String representation.</returns>
+        </member>
+        <member name="M:Vestris.ResourceLib.MenuExTemplateItemCollection.ToString(System.Int32)">
+            <summary>
+            String representation in the MENU format.
+            </summary>
+            <param name="indent">Indent.</param>
+            <returns>String representation.</returns>
+        </member>
+        <member name="T:Vestris.ResourceLib.MenuExTemplateItemCommand">
+            <summary>
+            A command menu item.
             </summary>
         </member>
         <member name="M:Vestris.ResourceLib.MenuExTemplateItemCommand.#ctor">
             <summary>
             A command menu item.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.MenuExTemplateItemCommand.IsSeparator">
+            <summary>
+            Returns true if the item is a separator.
             </summary>
         </member>
         <member name="M:Vestris.ResourceLib.MenuExTemplateItemCommand.ToString(System.Int32)">
@@ -2611,14 +2526,14 @@
             <param name="indent">Indent.</param>
             <returns>String representation.</returns>
         </member>
-        <member name="P:Vestris.ResourceLib.MenuExTemplateItemCommand.IsSeparator">
-            <summary>
-            Returns true if the item is a separator.
-            </summary>
-        </member>
         <member name="T:Vestris.ResourceLib.MenuExTemplateItemPopup">
             <summary>
             An extended popup menu item.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.MenuExTemplateItemPopup.SubMenuItems">
+            <summary>
+            Sub menu items.
             </summary>
         </member>
         <member name="M:Vestris.ResourceLib.MenuExTemplateItemPopup.#ctor">
@@ -2645,59 +2560,14 @@
             </summary>
             <returns>String representation.</returns>
         </member>
-        <member name="P:Vestris.ResourceLib.MenuExTemplateItemPopup.SubMenuItems">
-            <summary>
-            Sub menu items.
-            </summary>
-        </member>
-        <member name="T:Vestris.ResourceLib.MenuTemplate">
-            <summary>
-            Standard menu template.
-            </summary>
-        </member>
-        <member name="T:Vestris.ResourceLib.MenuTemplateBase">
-            <summary>
-            A menu template header.
-            </summary>
-        </member>
-        <member name="M:Vestris.ResourceLib.MenuTemplateBase.Read(System.IntPtr)">
-            <summary>
-            Read the menu template header.
-            </summary>
-            <param name="lpRes">Address in memory.</param>
-        </member>
-        <member name="M:Vestris.ResourceLib.MenuTemplateBase.Write(System.IO.BinaryWriter)">
-            <summary>
-            Write the menu to a binary stream.
-            </summary>
-            <param name="w">Binary stream.</param>
-        </member>
-        <member name="M:Vestris.ResourceLib.MenuTemplate.Read(System.IntPtr)">
-            <summary>
-            Read the menu template.
-            </summary>
-            <param name="lpRes">Address in memory.</param>
-        </member>
-        <member name="M:Vestris.ResourceLib.MenuTemplate.Write(System.IO.BinaryWriter)">
-            <summary>
-            Write menu template to a binary stream.
-            </summary>
-            <param name="w">Binary stream.</param>
-        </member>
-        <member name="M:Vestris.ResourceLib.MenuTemplate.ToString">
-            <summary>
-            String representation of the menu in the MENU format.
-            </summary>
-            <returns>String representation of the menu.</returns>
-        </member>
-        <member name="P:Vestris.ResourceLib.MenuTemplate.MenuItems">
-            <summary>
-            Menu items.
-            </summary>
-        </member>
         <member name="T:Vestris.ResourceLib.MenuResource">
             <summary>
             A generic resource.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.MenuResource.Menu">
+            <summary>
+            Menu template.
             </summary>
         </member>
         <member name="M:Vestris.ResourceLib.MenuResource.#ctor">
@@ -2736,38 +2606,50 @@
             </summary>
             <returns>String representation of the menu resource.</returns>
         </member>
-        <member name="P:Vestris.ResourceLib.MenuResource.Menu">
+        <member name="T:Vestris.ResourceLib.MenuTemplate">
             <summary>
-            Menu template.
+            Standard menu template.
             </summary>
         </member>
-        <member name="T:Vestris.ResourceLib.MenuExTemplate">
+        <member name="P:Vestris.ResourceLib.MenuTemplate.MenuItems">
             <summary>
-            Extended menu template.
+            Menu items.
             </summary>
         </member>
-        <member name="M:Vestris.ResourceLib.MenuExTemplate.Read(System.IntPtr)">
+        <member name="M:Vestris.ResourceLib.MenuTemplate.Read(System.IntPtr)">
             <summary>
             Read the menu template.
             </summary>
             <param name="lpRes">Address in memory.</param>
         </member>
-        <member name="M:Vestris.ResourceLib.MenuExTemplate.Write(System.IO.BinaryWriter)">
+        <member name="M:Vestris.ResourceLib.MenuTemplate.Write(System.IO.BinaryWriter)">
             <summary>
-            Write the menu template.
+            Write menu template to a binary stream.
             </summary>
             <param name="w">Binary stream.</param>
         </member>
-        <member name="M:Vestris.ResourceLib.MenuExTemplate.ToString">
+        <member name="M:Vestris.ResourceLib.MenuTemplate.ToString">
             <summary>
-            String representation of the menu in the MENUEX format.
+            String representation of the menu in the MENU format.
             </summary>
             <returns>String representation of the menu.</returns>
         </member>
-        <member name="P:Vestris.ResourceLib.MenuExTemplate.MenuItems">
+        <member name="T:Vestris.ResourceLib.MenuTemplateBase">
             <summary>
-            Menu items.
+            A menu template header.
             </summary>
+        </member>
+        <member name="M:Vestris.ResourceLib.MenuTemplateBase.Read(System.IntPtr)">
+            <summary>
+            Read the menu template header.
+            </summary>
+            <param name="lpRes">Address in memory.</param>
+        </member>
+        <member name="M:Vestris.ResourceLib.MenuTemplateBase.Write(System.IO.BinaryWriter)">
+            <summary>
+            Write the menu to a binary stream.
+            </summary>
+            <param name="w">Binary stream.</param>
         </member>
         <member name="T:Vestris.ResourceLib.MenuTemplateItem">
             <summary>
@@ -2782,6 +2664,11 @@
         <member name="F:Vestris.ResourceLib.MenuTemplateItem._menuString">
             <summary>
             Menu string.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.MenuTemplateItem.MenuString">
+            <summary>
+            Menu text.
             </summary>
         </member>
         <member name="M:Vestris.ResourceLib.MenuTemplateItem.Read(System.IntPtr)">
@@ -2803,11 +2690,6 @@
             String representation in the MENU format.
             </summary>
             <returns>String representation.</returns>
-        </member>
-        <member name="P:Vestris.ResourceLib.MenuTemplateItem.MenuString">
-            <summary>
-            Menu text.
-            </summary>
         </member>
         <member name="T:Vestris.ResourceLib.MenuTemplateItemCollection">
             <summary>
@@ -2850,6 +2732,11 @@
             A command menu item.
             </summary>
         </member>
+        <member name="P:Vestris.ResourceLib.MenuTemplateItemCommand.MenuId">
+            <summary>
+            Command menu id.
+            </summary>
+        </member>
         <member name="M:Vestris.ResourceLib.MenuTemplateItemCommand.#ctor">
             <summary>
             A command menu item.
@@ -2868,53 +2755,12 @@
             </summary>
             <param name="w">Binary stream.</param>
         </member>
-        <member name="M:Vestris.ResourceLib.MenuTemplateItemCommand.ToString(System.Int32)">
-            <summary>
-            String representation in the MENU format.
-            </summary>
-            <param name="indent">Indent.</param>
-            <returns>String representation.</returns>
-        </member>
-        <member name="P:Vestris.ResourceLib.MenuTemplateItemCommand.MenuId">
-            <summary>
-            Command menu id.
-            </summary>
-        </member>
         <member name="P:Vestris.ResourceLib.MenuTemplateItemCommand.IsSeparator">
             <summary>
             Returns true if the item is a separator.
             </summary>
         </member>
-        <member name="T:Vestris.ResourceLib.MenuExTemplateItemCollection">
-            <summary>
-            A collection of menu items.
-            </summary>
-        </member>
-        <member name="M:Vestris.ResourceLib.MenuExTemplateItemCollection.#ctor">
-            <summary>
-            A collection of extended menu items.
-            </summary>
-        </member>
-        <member name="M:Vestris.ResourceLib.MenuExTemplateItemCollection.Read(System.IntPtr)">
-            <summary>
-            Read the menu item collection.
-            </summary>
-            <param name="lpRes">Address in memory.</param>
-            <returns>End of the menu item structure.</returns>
-        </member>
-        <member name="M:Vestris.ResourceLib.MenuExTemplateItemCollection.Write(System.IO.BinaryWriter)">
-            <summary>
-            Write the menu collection to a binary stream.
-            </summary>
-            <param name="w">Binary stream.</param>
-        </member>
-        <member name="M:Vestris.ResourceLib.MenuExTemplateItemCollection.ToString">
-            <summary>
-            String representation in the MENU format.
-            </summary>
-            <returns>String representation.</returns>
-        </member>
-        <member name="M:Vestris.ResourceLib.MenuExTemplateItemCollection.ToString(System.Int32)">
+        <member name="M:Vestris.ResourceLib.MenuTemplateItemCommand.ToString(System.Int32)">
             <summary>
             String representation in the MENU format.
             </summary>
@@ -2924,6 +2770,11 @@
         <member name="T:Vestris.ResourceLib.MenuTemplateItemPopup">
             <summary>
             A popup menu item.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.MenuTemplateItemPopup.SubMenuItems">
+            <summary>
+            Sub menu items.
             </summary>
         </member>
         <member name="M:Vestris.ResourceLib.MenuTemplateItemPopup.#ctor">
@@ -2950,14 +2801,277 @@
             </summary>
             <returns>String representation.</returns>
         </member>
-        <member name="P:Vestris.ResourceLib.MenuTemplateItemPopup.SubMenuItems">
+        <member name="T:Vestris.ResourceLib.Resource">
             <summary>
-            Sub menu items.
+            A version resource.
             </summary>
+        </member>
+        <member name="F:Vestris.ResourceLib.Resource._type">
+            <summary>
+            Resource type.
+            </summary>
+        </member>
+        <member name="F:Vestris.ResourceLib.Resource._name">
+            <summary>
+            Resource name.
+            </summary>
+        </member>
+        <member name="F:Vestris.ResourceLib.Resource._language">
+            <summary>
+            Resource language.
+            </summary>
+        </member>
+        <member name="F:Vestris.ResourceLib.Resource._hModule">
+            <summary>
+            Loaded binary nodule.
+            </summary>
+        </member>
+        <member name="F:Vestris.ResourceLib.Resource._hResource">
+            <summary>
+            Pointer to the resource.
+            </summary>
+        </member>
+        <member name="F:Vestris.ResourceLib.Resource._size">
+            <summary>
+            Resource size.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.Resource.Size">
+            <summary>
+            Version resource size in bytes.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.Resource.Language">
+            <summary>
+            Language ID.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.Resource.Type">
+            <summary>
+            Resource type.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.Resource.TypeName">
+            <summary>
+            String representation of the resource type.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.Resource.Name">
+            <summary>
+            Resource name.
+            </summary>
+        </member>
+        <member name="M:Vestris.ResourceLib.Resource.#ctor">
+            <summary>
+            A new resource.
+            </summary>
+        </member>
+        <member name="M:Vestris.ResourceLib.Resource.#ctor(System.IntPtr,System.IntPtr,Vestris.ResourceLib.ResourceId,Vestris.ResourceLib.ResourceId,System.UInt16,System.Int32)">
+            <summary>
+            A structured resource embedded in an executable module.
+            </summary>
+            <param name="hModule">Module handle.</param>
+            <param name="hResource">Resource handle.</param>
+            <param name="type">Resource type.</param>
+            <param name="name">Resource name.</param>
+            <param name="language">Language ID.</param>
+            <param name="size">Resource size.</param>
+        </member>
+        <member name="M:Vestris.ResourceLib.Resource.LockAndReadResource(System.IntPtr,System.IntPtr)">
+            <summary>
+            Lock and read the resource.
+            </summary>
+            <param name="hModule">Module handle.</param>
+            <param name="hResource">Resource handle.</param>
+        </member>
+        <member name="M:Vestris.ResourceLib.Resource.LoadFrom(System.String)">
+            <summary>
+            Load a resource from an executable (.exe or .dll) file.
+            </summary>
+            <param name="filename">An executable (.exe or .dll) file.</param>
+        </member>
+        <member name="M:Vestris.ResourceLib.Resource.LoadFrom(System.String,Vestris.ResourceLib.ResourceId,Vestris.ResourceLib.ResourceId,System.UInt16)">
+            <summary>
+            Load a resource from an executable (.exe or .dll) file.
+            </summary>
+            <param name="filename">An executable (.exe or .dll) file.</param>
+            <param name="name">Resource name.</param>
+            <param name="type">Resource type.</param>
+            <param name="lang">Resource language.</param>
+        </member>
+        <member name="M:Vestris.ResourceLib.Resource.LoadFrom(System.IntPtr,Vestris.ResourceLib.ResourceId,Vestris.ResourceLib.ResourceId,System.UInt16)">
+            <summary>
+            Load a resource from an executable (.exe or .dll) module.
+            </summary>
+            <param name="hModule">An executable (.exe or .dll) module.</param>
+            <param name="type">Resource type.</param>
+            <param name="name">Resource name.</param>
+            <param name="lang">Resource language.</param>
+        </member>
+        <member name="M:Vestris.ResourceLib.Resource.Read(System.IntPtr,System.IntPtr)">
+            <summary>
+            Read a resource from a previously loaded module.
+            </summary>
+            <param name="hModule">Module handle.</param>
+            <param name="lpRes">Pointer to the beginning of the resource.</param>
+            <returns>Pointer to the end of the resource.</returns>
+        </member>
+        <member name="M:Vestris.ResourceLib.Resource.Write(System.IO.BinaryWriter)">
+            <summary>
+            Write the resource to a memory stream.
+            </summary>
+            <param name="w">Binary stream.</param>
+        </member>
+        <member name="M:Vestris.ResourceLib.Resource.WriteAndGetBytes">
+            <summary>
+            Return resource data.
+            </summary>
+            <returns>Resource data.</returns>
+        </member>
+        <member name="M:Vestris.ResourceLib.Resource.SaveTo(System.String)">
+            <summary>
+            Save a resource.
+            </summary>
+            <param name="filename">Name of an executable file (.exe or .dll).</param>
+        </member>
+        <member name="M:Vestris.ResourceLib.Resource.SaveTo(System.String,Vestris.ResourceLib.ResourceId,Vestris.ResourceLib.ResourceId,System.UInt16)">
+            <summary>
+            Save a resource to an executable (.exe or .dll) file.
+            </summary>
+            <param name="filename">Path to an executable file.</param>
+            <param name="name">Resource name.</param>
+            <param name="type">Resource type.</param>
+            <param name="langid">Language id.</param>
+        </member>
+        <member name="M:Vestris.ResourceLib.Resource.DeleteFrom(System.String)">
+            <summary>
+            Delete a resource from an executable (.exe or .dll) file.
+            </summary>
+            <param name="filename">Path to an executable file.</param>
+        </member>
+        <member name="M:Vestris.ResourceLib.Resource.Delete(System.String,Vestris.ResourceLib.ResourceId,Vestris.ResourceLib.ResourceId,System.UInt16)">
+            <summary>
+            Delete a resource from an executable (.exe or .dll) file.
+            </summary>
+            <param name="filename">Path to an executable file.</param>
+            <param name="name">Resource name.</param>
+            <param name="type">Resource type.</param>
+            <param name="lang">Resource language.</param>
+        </member>
+        <member name="M:Vestris.ResourceLib.Resource.SaveTo(System.String,Vestris.ResourceLib.ResourceId,Vestris.ResourceLib.ResourceId,System.UInt16,System.Byte[])">
+            <summary>
+            Save a resource to an executable (.exe or .dll) file.
+            </summary>
+            <param name="filename">Path to an executable file.</param>
+            <param name="name">Resource name.</param>
+            <param name="type">Resource type.</param>
+            <param name="lang">Resource language.</param>
+            <param name="data">Resource data.</param>
+        </member>
+        <member name="M:Vestris.ResourceLib.Resource.Save(System.String,System.Collections.Generic.IEnumerable{Vestris.ResourceLib.Resource})">
+            <summary>
+            Save a batch of resources to a given file.
+            </summary>
+            <param name="filename">Path to an executable file.</param>
+            <param name="resources">The resources to write.</param>
+        </member>
+        <member name="T:Vestris.ResourceLib.ResourceId">
+            <summary>
+            A resource Id.
+            There're two types of resource Ids, reserved integer numbers (eg. RT_ICON) and custom string names (eg. "CUSTOM").
+            </summary>
+        </member>
+        <member name="M:Vestris.ResourceLib.ResourceId.#ctor(System.IntPtr)">
+            <summary>
+            A resource identifier.
+            </summary>
+            <param name="value">A integer or string resource id.</param>
+        </member>
+        <member name="M:Vestris.ResourceLib.ResourceId.#ctor(System.UInt32)">
+            <summary>
+            A resource identifier.
+            </summary>
+            <param name="value">A integer resource id.</param>
+        </member>
+        <member name="M:Vestris.ResourceLib.ResourceId.#ctor(Vestris.ResourceLib.Kernel32.ResourceTypes)">
+            <summary>
+            A well-known resource-type identifier.
+            </summary>
+            <param name="value">A well known resource type.</param>
+        </member>
+        <member name="M:Vestris.ResourceLib.ResourceId.#ctor(System.String)">
+            <summary>
+            A custom resource identifier.
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="P:Vestris.ResourceLib.ResourceId.Id">
+            <summary>
+            Resource Id.
+            </summary>
+            <remarks>
+            If the resource Id is a string, it will be copied.
+            </remarks>
+        </member>
+        <member name="P:Vestris.ResourceLib.ResourceId.TypeName">
+            <summary>
+            String representation of a resource type name.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.ResourceId.ResourceType">
+            <summary>
+            An enumerated resource type for built-in resource types only.
+            </summary>
+        </member>
+        <member name="M:Vestris.ResourceLib.ResourceId.IsIntResource">
+            <summary>
+            Returns true if the resource is an integer resource.
+            </summary>
+        </member>
+        <member name="M:Vestris.ResourceLib.ResourceId.IsIntResource(System.IntPtr)">
+            <summary>
+            Returns true if the resource is an integer resource.
+            </summary>
+            <param name="value">Resource pointer.</param>
+        </member>
+        <member name="P:Vestris.ResourceLib.ResourceId.Name">
+            <summary>
+            Resource Id in a string format.
+            </summary>
+        </member>
+        <member name="M:Vestris.ResourceLib.ResourceId.ToString">
+            <summary>
+            String representation of the resource Id.
+            </summary>
+            <returns>Resource name.</returns>
+        </member>
+        <member name="M:Vestris.ResourceLib.ResourceId.GetHashCode">
+            <summary>
+            Resource Id hash code. 
+            Resource Ids of the same type have the same hash code.
+            </summary>
+            <returns>Resource Id.</returns>
+        </member>
+        <member name="M:Vestris.ResourceLib.ResourceId.Equals(System.Object)">
+            <summary>
+            Compares two resource Ids by value.
+            </summary>
+            <param name="obj">Resource Id.</param>
+            <returns>True if both resource Ids represent the same resource.</returns>
         </member>
         <member name="T:Vestris.ResourceLib.ResourceInfo">
             <summary>
             Resource info manager.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.ResourceInfo.Resources">
+            <summary>
+            A dictionary of resources, the key is the resource type, eg. "REGISTRY" or "16" (version).
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.ResourceInfo.ResourceTypes">
+            <summary>
+            A shortcut for available resource types.
             </summary>
         </member>
         <member name="M:Vestris.ResourceLib.ResourceInfo.#ctor">
@@ -3029,28 +3143,6 @@
             Dispose resource info object.
             </summary>
         </member>
-        <member name="M:Vestris.ResourceLib.ResourceInfo.GetEnumerator">
-            <summary>
-            Enumerates all resources within this resource info collection.
-            </summary>
-            <returns>Resources enumerator.</returns>
-        </member>
-        <member name="M:Vestris.ResourceLib.ResourceInfo.System#Collections#IEnumerable#GetEnumerator">
-            <summary>
-            Enumerates all resources within this resource info collection.
-            </summary>
-            <returns>Resources enumerator.</returns>
-        </member>
-        <member name="P:Vestris.ResourceLib.ResourceInfo.Resources">
-            <summary>
-            A dictionary of resources, the key is the resource type, eg. "REGISTRY" or "16" (version).
-            </summary>
-        </member>
-        <member name="P:Vestris.ResourceLib.ResourceInfo.ResourceTypes">
-            <summary>
-            A shortcut for available resource types.
-            </summary>
-        </member>
         <member name="P:Vestris.ResourceLib.ResourceInfo.Item(Vestris.ResourceLib.Kernel32.ResourceTypes)">
             <summary>
             A collection of resources.
@@ -3065,89 +3157,17 @@
             <param name="type">Resource type.</param>
             <returns>A collection of resources of a given type.</returns>
         </member>
-        <member name="T:Vestris.ResourceLib.ResourceId">
+        <member name="M:Vestris.ResourceLib.ResourceInfo.GetEnumerator">
             <summary>
-            A resource Id.
-            There're two types of resource Ids, reserved integer numbers (eg. RT_ICON) and custom string names (eg. "CUSTOM").
+            Enumerates all resources within this resource info collection.
             </summary>
+            <returns>Resources enumerator.</returns>
         </member>
-        <member name="M:Vestris.ResourceLib.ResourceId.#ctor(System.IntPtr)">
+        <member name="M:Vestris.ResourceLib.ResourceInfo.System#Collections#IEnumerable#GetEnumerator">
             <summary>
-            A resource identifier.
+            Enumerates all resources within this resource info collection.
             </summary>
-            <param name="value">A integer or string resource id.</param>
-        </member>
-        <member name="M:Vestris.ResourceLib.ResourceId.#ctor(System.UInt32)">
-            <summary>
-            A resource identifier.
-            </summary>
-            <param name="value">A integer resource id.</param>
-        </member>
-        <member name="M:Vestris.ResourceLib.ResourceId.#ctor(Vestris.ResourceLib.Kernel32.ResourceTypes)">
-            <summary>
-            A well-known resource-type identifier.
-            </summary>
-            <param name="value">A well known resource type.</param>
-        </member>
-        <member name="M:Vestris.ResourceLib.ResourceId.#ctor(System.String)">
-            <summary>
-            A custom resource identifier.
-            </summary>
-            <param name="value"></param>
-        </member>
-        <member name="M:Vestris.ResourceLib.ResourceId.IsIntResource">
-            <summary>
-            Returns true if the resource is an integer resource.
-            </summary>
-        </member>
-        <member name="M:Vestris.ResourceLib.ResourceId.IsIntResource(System.IntPtr)">
-            <summary>
-            Returns true if the resource is an integer resource.
-            </summary>
-            <param name="value">Resource pointer.</param>
-        </member>
-        <member name="M:Vestris.ResourceLib.ResourceId.ToString">
-            <summary>
-            String representation of the resource Id.
-            </summary>
-            <returns>Resource name.</returns>
-        </member>
-        <member name="M:Vestris.ResourceLib.ResourceId.GetHashCode">
-            <summary>
-            Resource Id hash code. 
-            Resource Ids of the same type have the same hash code.
-            </summary>
-            <returns>Resource Id.</returns>
-        </member>
-        <member name="M:Vestris.ResourceLib.ResourceId.Equals(System.Object)">
-            <summary>
-            Compares two resource Ids by value.
-            </summary>
-            <param name="obj">Resource Id.</param>
-            <returns>True if both resource Ids represent the same resource.</returns>
-        </member>
-        <member name="P:Vestris.ResourceLib.ResourceId.Id">
-            <summary>
-            Resource Id.
-            </summary>
-            <remarks>
-            If the resource Id is a string, it will be copied.
-            </remarks>
-        </member>
-        <member name="P:Vestris.ResourceLib.ResourceId.TypeName">
-            <summary>
-            String representation of a resource type name.
-            </summary>
-        </member>
-        <member name="P:Vestris.ResourceLib.ResourceId.ResourceType">
-            <summary>
-            An enumerated resource type for built-in resource types only.
-            </summary>
-        </member>
-        <member name="P:Vestris.ResourceLib.ResourceId.Name">
-            <summary>
-            Resource Id in a string format.
-            </summary>
+            <returns>Resources enumerator.</returns>
         </member>
         <member name="T:Vestris.ResourceLib.ResourceTableHeader">
             <summary>
@@ -3162,6 +3182,16 @@
         <member name="F:Vestris.ResourceLib.ResourceTableHeader._key">
             <summary>
             Resource table key.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.ResourceTableHeader.Key">
+            <summary>
+            Resource table key.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.ResourceTableHeader.Header">
+            <summary>
+            Resource header.
             </summary>
         </member>
         <member name="M:Vestris.ResourceLib.ResourceTableHeader.#ctor">
@@ -3206,16 +3236,6 @@
             </summary>
             <param name="indent">Indent.</param>
             <returns>String representation.</returns>
-        </member>
-        <member name="P:Vestris.ResourceLib.ResourceTableHeader.Key">
-            <summary>
-            Resource table key.
-            </summary>
-        </member>
-        <member name="P:Vestris.ResourceLib.ResourceTableHeader.Header">
-            <summary>
-            Resource header.
-            </summary>
         </member>
         <member name="T:Vestris.ResourceLib.ResourceUtil">
             <summary>
@@ -3281,6 +3301,16 @@
             <param name="len">Number of bytes to write.</param>
             <returns>New position within the stream.</returns>
         </member>
+        <member name="P:Vestris.ResourceLib.ResourceUtil.NEUTRALLANGID">
+            <summary>
+            Neutral language ID.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.ResourceUtil.USENGLISHLANGID">
+            <summary>
+            US-English language ID.
+            </summary>
+        </member>
         <member name="M:Vestris.ResourceLib.ResourceUtil.MAKELANGID(System.Int32,System.Int32)">
             <summary>
             Make a language ID from a primary language ID (low-order 10 bits) and a sublanguage (high-order 6 bits).
@@ -3327,21 +3357,16 @@
             <param name="flagValue">Flag vlaue</param>
             <returns>String representation of flags in the f1 | ... | fn format.</returns>
         </member>
-        <member name="P:Vestris.ResourceLib.ResourceUtil.NEUTRALLANGID">
-            <summary>
-            Neutral language ID.
-            </summary>
-        </member>
-        <member name="P:Vestris.ResourceLib.ResourceUtil.USENGLISHLANGID">
-            <summary>
-            US-English language ID.
-            </summary>
-        </member>
         <member name="T:Vestris.ResourceLib.StringFileInfo">
             <summary>
             This structure depicts the organization of data in a file-version resource. 
             It contains version information that can be displayed for a particular language and code page.
             http://msdn.microsoft.com/en-us/library/aa908808.aspx
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.StringFileInfo.Strings">
+            <summary>
+            Resource strings.
             </summary>
         </member>
         <member name="M:Vestris.ResourceLib.StringFileInfo.#ctor">
@@ -3368,18 +3393,6 @@
             </summary>
             <param name="w">Binary stream.</param>
         </member>
-        <member name="M:Vestris.ResourceLib.StringFileInfo.ToString(System.Int32)">
-            <summary>
-            String representation of StringFileInfo.
-            </summary>
-            <param name="indent">Indent.</param>
-            <returns>String in the StringFileInfo format.</returns>
-        </member>
-        <member name="P:Vestris.ResourceLib.StringFileInfo.Strings">
-            <summary>
-            Resource strings.
-            </summary>
-        </member>
         <member name="P:Vestris.ResourceLib.StringFileInfo.Default">
             <summary>
             Default (first) string table.
@@ -3392,6 +3405,13 @@
             <param name="key">Key.</param>
             <returns>A string table at a given index.</returns>
         </member>
+        <member name="M:Vestris.ResourceLib.StringFileInfo.ToString(System.Int32)">
+            <summary>
+            String representation of StringFileInfo.
+            </summary>
+            <param name="indent">Indent.</param>
+            <returns>String in the StringFileInfo format.</returns>
+        </member>
         <member name="T:Vestris.ResourceLib.StringResource">
             <summary>
             A string, RT_STRING resource.
@@ -3400,6 +3420,18 @@
             in the text that follows. Text follows length and contains the string in Unicode without the 
             NULL terminating character. There may be no characters in text, in which case length is zero.
             </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.StringResource.Strings">
+            <summary>
+            String collection in this resource.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.StringResource.Item(System.UInt16)">
+            <summary>
+            Returns a string of a given Id.
+            </summary>
+            <param name="id">String Id.</param>
+            <returns>A string of a given Id.</returns>
         </member>
         <member name="M:Vestris.ResourceLib.StringResource.#ctor">
             <summary>
@@ -3435,6 +3467,11 @@
             http://support.microsoft.com/kb/q196774/
             </summary>
         </member>
+        <member name="P:Vestris.ResourceLib.StringResource.BlockId">
+            <summary>
+            String table block id.
+            </summary>
+        </member>
         <member name="M:Vestris.ResourceLib.StringResource.Read(System.IntPtr,System.IntPtr)">
             <summary>
             Read the strings.
@@ -3449,85 +3486,16 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="P:Vestris.ResourceLib.StringResource.Strings">
-            <summary>
-            String collection in this resource.
-            </summary>
-        </member>
-        <member name="P:Vestris.ResourceLib.StringResource.Item(System.UInt16)">
-            <summary>
-            Returns a string of a given Id.
-            </summary>
-            <param name="id">String Id.</param>
-            <returns>A string of a given Id.</returns>
-        </member>
-        <member name="P:Vestris.ResourceLib.StringResource.BlockId">
-            <summary>
-            String table block id.
-            </summary>
-        </member>
-        <member name="T:Vestris.ResourceLib.StringTableEntry">
-            <summary>
-            This structure depicts the organization of data in a file-version resource. It contains a string 
-            that describes a specific aspect of a file, such as a file's version, its copyright notices, 
-            or its trademarks.
-            http://msdn.microsoft.com/en-us/library/aa909025.aspx
-            </summary>
-        </member>
-        <member name="F:Vestris.ResourceLib.StringTableEntry._value">
-            <summary>
-            The value is always stored double-null-terminated.
-            </summary>
-        </member>
-        <member name="M:Vestris.ResourceLib.StringTableEntry.#ctor(System.String)">
-            <summary>
-            A new string resource.
-            </summary>
-            <param name="key">Key.</param>
-        </member>
-        <member name="M:Vestris.ResourceLib.StringTableEntry.#ctor(System.IntPtr)">
-            <summary>
-            An existing string resource.
-            </summary>
-            <param name="lpRes">Pointer to the beginning of a string resource.</param>
-        </member>
-        <member name="M:Vestris.ResourceLib.StringTableEntry.Read(System.IntPtr)">
-            <summary>
-            Read a string resource.
-            </summary>
-            <param name="lpRes">Pointer to the beginning of a string resource.</param>
-        </member>
-        <member name="M:Vestris.ResourceLib.StringTableEntry.Write(System.IO.BinaryWriter)">
-            <summary>
-            Write a string resource to a binary stream.
-            </summary>
-            <param name="w">Binary stream.</param>
-        </member>
-        <member name="P:Vestris.ResourceLib.StringTableEntry.Header">
-            <summary>
-            String resource header.
-            </summary>
-        </member>
-        <member name="P:Vestris.ResourceLib.StringTableEntry.Key">
-            <summary>
-            Key.
-            </summary>
-        </member>
-        <member name="P:Vestris.ResourceLib.StringTableEntry.StringValue">
-            <summary>
-            String value (removing the double-null-terminator).
-            </summary>
-        </member>
-        <member name="P:Vestris.ResourceLib.StringTableEntry.Value">
-            <summary>
-            Value.
-            </summary>
-        </member>
         <member name="T:Vestris.ResourceLib.StringTable">
             <summary>
             This structure depicts the organization of data in a file-version resource. It contains language 
             and code page formatting information for the strings. A code page is an ordered character set.
             See http://msdn.microsoft.com/en-us/library/aa909192.aspx for more information.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.StringTable.Strings">
+            <summary>
+            Resource strings.
             </summary>
         </member>
         <member name="M:Vestris.ResourceLib.StringTable.#ctor">
@@ -3561,18 +3529,6 @@
             <param name="w">Binary stream.</param>
             <returns>Last unpadded position.</returns>
         </member>
-        <member name="M:Vestris.ResourceLib.StringTable.ToString(System.Int32)">
-            <summary>
-            String representation of the string table.
-            </summary>
-            <param name="indent">Indent.</param>
-            <returns>String representation of the strings table.</returns>
-        </member>
-        <member name="P:Vestris.ResourceLib.StringTable.Strings">
-            <summary>
-            Resource strings.
-            </summary>
-        </member>
         <member name="P:Vestris.ResourceLib.StringTable.LanguageID">
             <summary>
             The four most significant digits of the key represent the language identifier.
@@ -3592,51 +3548,80 @@
             <param name="key">Key.</param>
             <returns>An entry within the string table.</returns>
         </member>
+        <member name="M:Vestris.ResourceLib.StringTable.ToString(System.Int32)">
+            <summary>
+            String representation of the string table.
+            </summary>
+            <param name="indent">Indent.</param>
+            <returns>String representation of the strings table.</returns>
+        </member>
+        <member name="T:Vestris.ResourceLib.StringTableEntry">
+            <summary>
+            This structure depicts the organization of data in a file-version resource. It contains a string 
+            that describes a specific aspect of a file, such as a file's version, its copyright notices, 
+            or its trademarks.
+            http://msdn.microsoft.com/en-us/library/aa909025.aspx
+            </summary>
+        </member>
+        <member name="F:Vestris.ResourceLib.StringTableEntry._value">
+            <summary>
+            The value is always stored double-null-terminated.
+            </summary>
+        </member>
+        <member name="F:Vestris.ResourceLib.StringTableEntry.ConsiderPaddingForLength">
+            <summary>
+            When set to true the length in the header will also contain the padding bytes when writing to a stream.
+            The MSDN reference (http://www.webcitation.org/6zBLYbvww) does not clarify which variant is 'right'.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.StringTableEntry.Header">
+            <summary>
+            String resource header.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.StringTableEntry.Key">
+            <summary>
+            Key.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.StringTableEntry.StringValue">
+            <summary>
+            String value (removing the double-null-terminator).
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.StringTableEntry.Value">
+            <summary>
+            Value.
+            </summary>
+        </member>
+        <member name="M:Vestris.ResourceLib.StringTableEntry.#ctor(System.String)">
+            <summary>
+            A new string resource.
+            </summary>
+            <param name="key">Key.</param>
+        </member>
+        <member name="M:Vestris.ResourceLib.StringTableEntry.#ctor(System.IntPtr)">
+            <summary>
+            An existing string resource.
+            </summary>
+            <param name="lpRes">Pointer to the beginning of a string resource.</param>
+        </member>
+        <member name="M:Vestris.ResourceLib.StringTableEntry.Read(System.IntPtr)">
+            <summary>
+            Read a string resource.
+            </summary>
+            <param name="lpRes">Pointer to the beginning of a string resource.</param>
+        </member>
+        <member name="M:Vestris.ResourceLib.StringTableEntry.Write(System.IO.BinaryWriter)">
+            <summary>
+            Write a string resource to a binary stream.
+            </summary>
+            <param name="w">Binary stream.</param>
+        </member>
         <member name="T:Vestris.ResourceLib.User32">
             <summary>
             User32.dll functions.
             </summary>
-        </member>
-        <member name="M:Vestris.ResourceLib.User32.GetDC(System.IntPtr)">
-            <summary>
-            Retrieve a handle to a device context (DC) for the client area of a specified window or for the entire screen. 
-            </summary>
-            <param name="hWnd">A handle to the window whose DC is to be retrieved. If this value is NULL, GetDC retrieves the DC for the entire screen.</param>
-            <returns>
-            If the function succeeds, the return value is a handle to the DC for the specified window's client area. 
-            If the function fails, the return value is NULL.
-            </returns>
-        </member>
-        <member name="M:Vestris.ResourceLib.User32.ReleaseDC(System.IntPtr,System.IntPtr)">
-            <summary>
-            Releases a device context (DC), freeing it for use by other applications.
-            </summary>
-            <param name="hWnd">A handle to the window whose DC is to be released.</param>
-            <param name="hDC">A handle to the DC to be released.</param>
-            <returns>
-            The return value indicates whether the DC was released. If the DC was released, the return value is 1.
-            If the DC was not released, the return value is zero.
-            </returns>
-        </member>
-        <member name="M:Vestris.ResourceLib.User32.DestroyIcon(System.IntPtr)">
-            <summary>
-            Destroys an icon and frees any memory the icon occupied.
-            </summary>
-            <param name="hIcon">Handle to the icon to be destroyed.</param>
-            <returns>
-            If the function succeeds, the return value is nonzero.
-            If the function fails, the return value is zero.
-            </returns>
-        </member>
-        <member name="M:Vestris.ResourceLib.User32.CreateIconIndirect(Vestris.ResourceLib.User32.ICONINFO@)">
-            <summary>
-            Creates an icon or cursor from an ICONINFO structure.
-            </summary>
-            <param name="piconInfo">Pointer to an ICONINFO structure the function uses to create the icon or cursor.</param>
-            <returns>
-            If the function succeeds, the return value is a handle to the icon or cursor that is created.
-            If the function fails, the return value is NULL.
-            </returns>
         </member>
         <member name="T:Vestris.ResourceLib.User32.ICONINFO">
             <summary>
@@ -3670,6 +3655,27 @@
             <summary>
             Handle to the icon color bitmap.
             </summary>
+        </member>
+        <member name="M:Vestris.ResourceLib.User32.GetDC(System.IntPtr)">
+            <summary>
+            Retrieve a handle to a device context (DC) for the client area of a specified window or for the entire screen. 
+            </summary>
+            <param name="hWnd">A handle to the window whose DC is to be retrieved. If this value is NULL, GetDC retrieves the DC for the entire screen.</param>
+            <returns>
+            If the function succeeds, the return value is a handle to the DC for the specified window's client area. 
+            If the function fails, the return value is NULL.
+            </returns>
+        </member>
+        <member name="M:Vestris.ResourceLib.User32.ReleaseDC(System.IntPtr,System.IntPtr)">
+            <summary>
+            Releases a device context (DC), freeing it for use by other applications.
+            </summary>
+            <param name="hWnd">A handle to the window whose DC is to be released.</param>
+            <param name="hDC">A handle to the DC to be released.</param>
+            <returns>
+            The return value indicates whether the DC was released. If the DC was released, the return value is 1.
+            If the DC was not released, the return value is zero.
+            </returns>
         </member>
         <member name="T:Vestris.ResourceLib.User32.DIALOGTEMPLATE">
             <summary>
@@ -6138,6 +6144,11 @@
             http://msdn.microsoft.com/en-us/library/aa909193.aspx
             </summary>
         </member>
+        <member name="P:Vestris.ResourceLib.VarFileInfo.Vars">
+            <summary>
+            A hardware independent dictionary of language and code page identifier tables.
+            </summary>
+        </member>
         <member name="M:Vestris.ResourceLib.VarFileInfo.#ctor">
             <summary>
             A new hardware independent dictionary of language and code page identifier tables.
@@ -6162,18 +6173,6 @@
             </summary>
             <param name="w">Binary stream.</param>
         </member>
-        <member name="M:Vestris.ResourceLib.VarFileInfo.ToString(System.Int32)">
-            <summary>
-            String representation of VarFileInfo.
-            </summary>
-            <param name="indent">Indent.</param>
-            <returns>String in the VarFileInfo format.</returns>
-        </member>
-        <member name="P:Vestris.ResourceLib.VarFileInfo.Vars">
-            <summary>
-            A hardware independent dictionary of language and code page identifier tables.
-            </summary>
-        </member>
         <member name="P:Vestris.ResourceLib.VarFileInfo.Default">
             <summary>
             The default language and code page identifier table.
@@ -6186,11 +6185,23 @@
             <param name="language">Language ID.</param>
             <returns>A language and code page identifier table.</returns>
         </member>
+        <member name="M:Vestris.ResourceLib.VarFileInfo.ToString(System.Int32)">
+            <summary>
+            String representation of VarFileInfo.
+            </summary>
+            <param name="indent">Indent.</param>
+            <returns>String in the VarFileInfo format.</returns>
+        </member>
         <member name="T:Vestris.ResourceLib.VarTable">
             <summary>
             This structure depicts the organization of data in a file-version resource. It typically contains a 
             list of language and code page identifier pairs that the version of the application or DLL supports.
             http://msdn.microsoft.com/en-us/library/bb202818.aspx
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.VarTable.Languages">
+            <summary>
+            A dictionary of language and code page identifier pairs.
             </summary>
         </member>
         <member name="M:Vestris.ResourceLib.VarTable.#ctor">
@@ -6224,18 +6235,6 @@
             <param name="w">Binary stream.</param>
             <returns>Last unpadded position.</returns>
         </member>
-        <member name="M:Vestris.ResourceLib.VarTable.ToString(System.Int32)">
-            <summary>
-            String representation of the var table.
-            </summary>
-            <param name="indent">Indent.</param>
-            <returns>String representation of the var table.</returns>
-        </member>
-        <member name="P:Vestris.ResourceLib.VarTable.Languages">
-            <summary>
-            A dictionary of language and code page identifier pairs.
-            </summary>
-        </member>
         <member name="P:Vestris.ResourceLib.VarTable.Item(System.UInt16)">
             <summary>
             Returns a code page identifier for a given language.
@@ -6243,12 +6242,29 @@
             <param name="key">Language ID.</param>
             <returns>Code page identifier.</returns>
         </member>
+        <member name="M:Vestris.ResourceLib.VarTable.ToString(System.Int32)">
+            <summary>
+            String representation of the var table.
+            </summary>
+            <param name="indent">Indent.</param>
+            <returns>String representation of the var table.</returns>
+        </member>
         <member name="T:Vestris.ResourceLib.VersionResource">
             <summary>
             VS_VERSIONINFO
-            This structure depicts the organization of data in a file-version resource. It is the root structure 
+            This structure depicts the organization of data in a file-version resource. It is the root structure
             that contains all other file-version information structures.
             http://msdn.microsoft.com/en-us/library/aa914916.aspx
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.VersionResource.Header">
+            <summary>
+            The resource header.
+            </summary>
+        </member>
+        <member name="P:Vestris.ResourceLib.VersionResource.Resources">
+            <summary>
+            A dictionary of resource tables.
             </summary>
         </member>
         <member name="M:Vestris.ResourceLib.VersionResource.#ctor(System.IntPtr,System.IntPtr,Vestris.ResourceLib.ResourceId,Vestris.ResourceLib.ResourceId,System.UInt16,System.Int32)">
@@ -6275,28 +6291,6 @@
             <param name="lpRes">Pointer to the beginning of the resource.</param>
             <returns>Pointer to the end of the resource.</returns>
         </member>
-        <member name="M:Vestris.ResourceLib.VersionResource.Write(System.IO.BinaryWriter)">
-            <summary>
-            Write this version resource to a binary stream.
-            </summary>
-            <param name="w">Binary stream.</param>
-        </member>
-        <member name="M:Vestris.ResourceLib.VersionResource.ToString">
-            <summary>
-            Return string representation of the version resource.
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="P:Vestris.ResourceLib.VersionResource.Header">
-            <summary>
-            The resource header.
-            </summary>
-        </member>
-        <member name="P:Vestris.ResourceLib.VersionResource.Resources">
-            <summary>
-            A dictionary of resource tables.
-            </summary>
-        </member>
         <member name="P:Vestris.ResourceLib.VersionResource.FileVersion">
             <summary>
             String representation of the file version.
@@ -6312,12 +6306,31 @@
             String representation of the protect version.
             </summary>
         </member>
+        <member name="M:Vestris.ResourceLib.VersionResource.Write(System.IO.BinaryWriter)">
+            <summary>
+            Write this version resource to a binary stream.
+            </summary>
+            <param name="w">Binary stream.</param>
+        </member>
         <member name="P:Vestris.ResourceLib.VersionResource.Item(System.String)">
             <summary>
             Returns an entry within this resource table.
             </summary>
             <param name="key">Entry key.</param>
             <returns>A resource table.</returns>
+        </member>
+        <member name="P:Vestris.ResourceLib.VersionResource.Item(System.Int32)">
+            <summary>
+            Returns an entry within this resource table.
+            </summary>
+            <param name="index">Entry index.</param>
+            <returns>A resource table.</returns>
+        </member>
+        <member name="M:Vestris.ResourceLib.VersionResource.ToString">
+            <summary>
+            Return string representation of the version resource.
+            </summary>
+            <returns></returns>
         </member>
         <member name="T:Vestris.ResourceLib.Winver">
             <summary>
